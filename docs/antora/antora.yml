@@ -1,0 +1,12 @@
+name: learn-lldb
+title: 学习 lldb
+version: master
+asciidoc:
+  attributes:
+    numbered: '@'
+    website: https://peacetrue.github.io
+    app-group: com.github.peacetrue.learn
+    app-name: learn-lldb
+start_page: ROOT:index.adoc
+nav:
+  - modules/ROOT/nav.adoc
