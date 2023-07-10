@@ -1,0 +1,7 @@
+= thread-trace-start
+
+----
+Start tracing threads with the corresponding trace plug-in for the current process.
+
+Syntax: thread trace start [<trace-options>]
+----

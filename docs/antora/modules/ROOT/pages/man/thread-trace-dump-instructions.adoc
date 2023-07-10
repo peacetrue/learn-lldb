@@ -1,0 +1,33 @@
+= thread-trace-dump-instructions
+
+----
+Dump the traced instructions for one thread. If no thread is specified, show the current thread.
+
+Syntax: thread trace dump instructions <cmd-options>
+
+Command Options Usage:
+  thread trace dump instructions [-Cfrt] [-c <count>] [-i <index>] [-s <index>]
+
+       -C ( --continue )
+            Continue dumping instructions right where the previous invocation of this command was left, or from the beginning if this is the first
+            invocation. The --skip argument is discarded and the other arguments are preserved from the previous invocation when possible.
+
+       -c <count> ( --count <count> )
+            The number of instructions to display starting at the most recent instruction, or the oldest if --forwards is provided.
+
+       -f ( --forwards )
+            If specified, the trace is traversed forwards chronologically starting at the oldest instruction. Otherwise, it starts at the most recent
+            one and the traversal is backwards.
+
+       -i <index> ( --id <index> )
+            Custom starting instruction id from where to start traversing. This id can be provided in decimal or hexadecimal representation.
+
+       -r ( --raw )
+            Dump only instruction address without disassembly nor symbol information.
+
+       -s <index> ( --skip <index> )
+            How many instruction to skip from the starting position of the trace before starting the traversal.
+
+       -t ( --tsc )
+            For each instruction, print the corresponding timestamp counter if available.
+----

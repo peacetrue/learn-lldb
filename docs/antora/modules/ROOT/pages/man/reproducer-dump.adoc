@@ -1,0 +1,17 @@
+= reproducer-dump
+
+----
+Dump the information contained in a reproducer. If no reproducer is specified during replay, it dumps the content of the current reproducer.
+
+Syntax: reproducer dump <cmd-options>
+
+Command Options Usage:
+  reproducer dump -p <none> [-f <filename>]
+
+       -f <filename> ( --file <filename> )
+            The reproducer path. If a reproducer is replayed and no path is provided, that reproducer is dumped.
+
+       -p <none> ( --provider <none> )
+            The reproducer provider to dump.
+            Values: commands | files | symbol-files | gdb | processes | version | cwd | home | none
+----

@@ -1,0 +1,16 @@
+= watchpoint-command
+
+----
+Commands for adding, removing and examining LLDB commands executed when the watchpoint is hit (watchpoint 'commands').
+
+Syntax: command <sub-command> [<sub-command-options>] <watchpoint-id>
+
+The following subcommands are supported:
+
+      add    -- Add a set of LLDB commands to a watchpoint, to be executed whenever the watchpoint is hit.  The commands added to the watchpoint replace
+                any commands previously added to it.
+      delete -- Delete the set of commands from a watchpoint.
+      list   -- List the script or set of commands to be executed when the watchpoint is hit.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

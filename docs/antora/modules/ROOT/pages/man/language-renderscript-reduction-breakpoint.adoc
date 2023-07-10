@@ -1,0 +1,13 @@
+= language-renderscript-reduction-breakpoint
+
+----
+Commands that manipulate breakpoints on renderscript general reductions.
+
+Syntax: renderscript reduction breakpoint
+
+The following subcommands are supported:
+
+      set -- Set a breakpoint on named RenderScript general reductions
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

@@ -1,0 +1,10 @@
+= poarray
+
+----
+poarray <COUNT> <EXPRESSION> -- lldb will evaluate EXPRESSION to get the address of an array of COUNT objects in memory, and will call po on them. 
+Expects 'raw' input (see 'help raw-input'.)
+
+Syntax: poarray <expr>
+  poarray <expr>
+'poarray' is an abbreviation for 'expression -O -Z %1    --'
+----

@@ -1,0 +1,8 @@
+= thread-plan-prune
+
+----
+Removes any thread plans associated with currently unreported threads.  Specify one or more TID's to remove, or if no TID's are provides, remove threads
+for all unreported threads
+
+Syntax: thread plan prune [<thread-id> [<thread-id> [...]]]
+----

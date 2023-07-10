@@ -1,0 +1,7 @@
+= language-renderscript-allocation-save
+
+----
+Write renderscript allocation contents to a file.
+
+Syntax: renderscript allocation save <ID> <filename>
+----

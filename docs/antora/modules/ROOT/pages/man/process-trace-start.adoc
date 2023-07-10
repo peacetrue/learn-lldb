@@ -1,0 +1,7 @@
+= process-trace-start
+
+----
+Start tracing this process with the corresponding trace plug-in.
+
+Syntax: process trace start [<trace-options>]
+----

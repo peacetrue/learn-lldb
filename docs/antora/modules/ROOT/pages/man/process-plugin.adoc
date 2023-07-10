@@ -1,0 +1,7 @@
+= process-plugin
+
+----
+Send a custom command to the current target process plug-in.
+
+Syntax: process plugin <args>
+----

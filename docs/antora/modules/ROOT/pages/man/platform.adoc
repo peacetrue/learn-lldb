@@ -1,0 +1,28 @@
+= platform
+
+----
+Commands to manage and create platforms.
+
+Syntax: platform [connect|disconnect|info|list|status|select] ...
+
+The following subcommands are supported:
+
+      connect         -- Select the current platform by providing a connection URL.
+      disconnect      -- Disconnect from the current platform.
+      file            -- Commands to access files on the current platform.
+      file-exists     -- Check if the file exists on the remote end.
+      get-file        -- Transfer a file from the remote end to the local host.
+      get-permissions -- Get the file permission bits from the remote end.
+      get-size        -- Get the file size from the remote end.
+      list            -- List all platforms that are available.
+      mkdir           -- Make a new directory on the remote end.
+      process         -- Commands to query, launch and attach to processes on the current platform.
+      put-file        -- Transfer a file from this system to the remote end.
+      select          -- Create a platform if needed and select it as the current platform.
+      settings        -- Set settings for the current target's platform, or for a platform by name.
+      shell           -- Run a shell command on the current platform.  Expects 'raw' input (see 'help raw-input'.)
+      status          -- Display status for the current platform.
+      target-install  -- Install a target (bundle or executable file) to the remote end.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

@@ -1,0 +1,7 @@
+= command-script-list
+
+----
+List defined top-level scripted commands.
+
+Syntax: command script list
+----

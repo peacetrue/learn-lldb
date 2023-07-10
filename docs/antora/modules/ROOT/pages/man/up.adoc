@@ -1,0 +1,10 @@
+= up
+
+----
+Select an older stack frame.  Defaults to moving one frame, a numeric argument can specify an arbitrary number.  Expects 'raw' input (see 'help
+raw-input'.)
+
+Syntax: _regexp-up [<count>]
+
+'up' is an abbreviation for '_regexp-up'
+----

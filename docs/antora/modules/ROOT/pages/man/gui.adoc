@@ -1,0 +1,7 @@
+= gui
+
+----
+Switch into the curses based GUI mode.
+
+Syntax: gui
+----

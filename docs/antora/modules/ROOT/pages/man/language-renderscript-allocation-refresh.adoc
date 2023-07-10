@@ -1,0 +1,7 @@
+= language-renderscript-allocation-refresh
+
+----
+Recomputes the details of all allocations.
+
+Syntax: renderscript allocation refresh
+----

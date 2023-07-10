@@ -1,0 +1,9 @@
+= attach
+
+----
+Attach to process by ID or name.  Expects 'raw' input (see 'help raw-input'.)
+
+Syntax: _regexp-attach <pid> | <process-name>
+
+'attach' is an abbreviation for '_regexp-attach'
+----

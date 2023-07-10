@@ -1,0 +1,7 @@
+= frame-info
+
+----
+List information about the current stack frame in the current thread.
+
+Syntax: frame info
+----

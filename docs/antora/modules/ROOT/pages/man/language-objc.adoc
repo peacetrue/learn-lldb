@@ -1,0 +1,14 @@
+= language-objc
+
+----
+Commands for operating on the Objective-C language runtime.
+
+Syntax: objc <subcommand> [<subcommand-options>]
+
+The following subcommands are supported:
+
+      class-table    -- Commands for operating on the Objective-C class table.
+      tagged-pointer -- Commands for operating on Objective-C tagged pointers.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

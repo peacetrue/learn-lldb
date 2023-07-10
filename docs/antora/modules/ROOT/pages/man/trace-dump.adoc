@@ -1,0 +1,13 @@
+= trace-dump
+
+----
+Dump the loaded processor trace data.
+
+Syntax: trace dump
+
+Command Options Usage:
+  trace dump [-v]
+
+       -v ( --verbose )
+            Show verbose trace information.
+----

@@ -1,0 +1,41 @@
+= source-list
+
+----
+Display source code for the current target process as specified by options.
+
+Syntax: source list <cmd-options>
+
+Command Options Usage:
+  source list [-b] [-c <count>] [-f <filename>] [-l <linenum>] [-s <shlib-name>]
+  source list [-b] [-c <count>] [-n <symbol>] [-s <shlib-name>]
+  source list [-b] [-a <address-expression>] [-c <count>]
+  source list [-br] [-c <count>]
+  source list [-b] [-c <count>] [-y <linespec>] [-s <shlib-name>]
+
+       -a <address-expression> ( --address <address-expression> )
+            Lookup the address and display the source information for the corresponding file and line.
+
+       -b ( --show-breakpoints )
+            Show the line table locations from the debug information that indicate valid places to set source level breakpoints.
+
+       -c <count> ( --count <count> )
+            The number of source lines to display.
+
+       -f <filename> ( --file <filename> )
+            The file from which to display source.
+
+       -l <linenum> ( --line <linenum> )
+            The line number at which to start the display source.
+
+       -n <symbol> ( --name <symbol> )
+            The name of a function whose source to display.
+
+       -r ( --reverse )
+            Reverse the listing to look backwards from the last displayed block of source.
+
+       -s <shlib-name> ( --shlib <shlib-name> )
+            Look up the source file in the given shared library.
+
+       -y <linespec> ( --joint-specifier <linespec> )
+            A specifier in the form filename:line[:column] from which to display source.
+----

@@ -1,0 +1,7 @@
+= type-category-delete
+
+----
+Delete a category and all associated formatters.
+
+Syntax: type category delete <name> [<name> [...]]
+----

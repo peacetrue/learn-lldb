@@ -1,0 +1,13 @@
+= language-renderscript-scriptgroup-breakpoint
+
+----
+Renderscript scriptgroup breakpoint interaction.
+
+Syntax: renderscript scriptgroup breakpoint set [--stop-on-all/-a]<scriptgroup name> ...
+
+The following subcommands are supported:
+
+      set -- Place a breakpoint on all kernels forming a script group.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

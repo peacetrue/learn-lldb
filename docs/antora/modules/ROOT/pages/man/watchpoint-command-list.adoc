@@ -1,0 +1,7 @@
+= watchpoint-command-list
+
+----
+List the script or set of commands to be executed when the watchpoint is hit.
+
+Syntax: watchpoint command list <watchpt-id>
+----

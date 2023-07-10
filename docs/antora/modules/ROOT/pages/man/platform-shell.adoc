@@ -1,0 +1,23 @@
+= platform-shell
+
+----
+Run a shell command on the current platform.  Expects 'raw' input (see 'help raw-input'.)
+
+Syntax: platform shell <shell-command>
+
+Command Options Usage:
+  platform shell [-h] [-s <path>] [-t <value>] -- [<none> [<none> [...]]]
+  platform shell [<none> [<none> [...]]]
+
+       -h ( --host )
+            Run the commands on the host shell when enabled.
+
+       -s <path> ( --shell <path> )
+            Shell interpreter path. This is the binary used to run the command.
+
+       -t <value> ( --timeout <value> )
+            Seconds to wait for the remote host to finish running the command.
+     
+     Important Note: Because this command takes 'raw' input, if you use any command options you must use ' -- ' between the end of the command options
+     and the beginning of the raw input.
+----

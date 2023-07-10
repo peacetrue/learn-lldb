@@ -1,0 +1,18 @@
+= type-synthetic
+
+----
+Commands for operating on synthetic type representations.
+
+Syntax: type synthetic [<sub-command-options>] 
+
+The following subcommands are supported:
+
+      add    -- Add a new synthetic provider for a type.
+      clear  -- Delete all existing synthetic providers.
+      delete -- Delete an existing synthetic provider for a type.
+      info   -- This command evaluates the provided expression and shows which synthetic is applied to the resulting value (if any).  Expects 'raw'
+                input (see 'help raw-input'.)
+      list   -- Show a list of current synthetic providers.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

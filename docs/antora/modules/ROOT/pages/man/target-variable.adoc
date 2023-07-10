@@ -1,0 +1,83 @@
+= target-variable
+
+----
+Read global variables for the current target, before or while running a process.
+
+Syntax: target variable <cmd-options> <variable-name> [<variable-name> [...]]
+
+Command Options Usage:
+  target variable [-AFLORTcgrs] [-d <none>] [-S <boolean>] [-D <count>] [-P <count>] [-Y[<count>]] [-V <boolean>] [-Z <count>] [-y <name>] [-z <name>] [-f <format>] [-G <gdb-format>] [--file <filename>] [--shlib <filename>] <variable-name> [<variable-name> [...]]
+
+       -A ( --show-all-children )
+            Ignore the upper bound on the number of children to show.
+
+       -D <count> ( --depth <count> )
+            Set the max recurse depth when dumping aggregate types (default is infinity).
+
+       -F ( --flat )
+            Display results in a flat format that uses expression paths for each variable or member.
+
+       -G <gdb-format> ( --gdb-format <gdb-format> )
+            Specify a format using a GDB format specifier string.
+
+       -L ( --location )
+            Show variable location information.
+
+       -O ( --object-description )
+            Display using a language-specific description API, if possible.
+
+       -P <count> ( --ptr-depth <count> )
+            The number of pointers to be traversed when dumping values (default is zero).
+
+       -R ( --raw-output )
+            Don't use formatting options.
+
+       -S <boolean> ( --synthetic-type <boolean> )
+            Show the object obeying its synthetic provider, if available.
+
+       -T ( --show-types )
+            Show variable types when dumping values.
+
+       -V <boolean> ( --validate <boolean> )
+            Show results of type validators.
+
+       -Y[<count>] ( --no-summary-depth=[<count>] )
+            Set the depth at which omitting summary information stops (default is 1).
+
+       -Z <count> ( --element-count <count> )
+            Treat the result of the expression as if its type is an array of this many values.
+
+       -c ( --show-declaration )
+            Show variable declaration information (source file and line where the variable was declared).
+
+       -d <none> ( --dynamic-type <none> )
+            Show the object as its full dynamic type, not its static type, if available.
+            Values: no-dynamic-values | run-target | no-run-target
+
+       -f <format> ( --format <format> )
+            Specify a format to be used for display.
+
+       -g ( --show-globals )
+            Show the current frame source file global and static variables.
+
+       -r ( --regex )
+            The <variable-name> argument for name lookups are regular expressions.
+
+       -s ( --scope )
+            Show variable scope (argument, local, global, static).
+
+       -y <name> ( --summary <name> )
+            Specify the summary that the variable output should use.
+
+       -z <name> ( --summary-string <name> )
+            Specify a summary string to use to format the variable output.
+
+       --file <filename>
+            A basename or fullpath to a file that contains global variables. This option can be specified multiple times.
+
+       --shlib <filename>
+            A basename or fullpath to a shared library to use in the search for global variables. This option can be specified multiple times.
+     
+     This command takes options and free-form arguments.  If your arguments resemble option specifiers (i.e., they start with a - or --), you must use '
+     -- ' between the end of the command options and the beginning of the arguments.
+----

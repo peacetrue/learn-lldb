@@ -1,0 +1,13 @@
+= process-detach
+
+----
+Detach from the current target process.
+
+Syntax: process detach
+
+Command Options Usage:
+  process detach [-s <boolean>]
+
+       -s <boolean> ( --keep-stopped <boolean> )
+            Whether or not the process should be kept stopped on detach (if possible).
+----

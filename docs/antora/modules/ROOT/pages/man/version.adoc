@@ -1,0 +1,7 @@
+= version
+
+----
+Show the LLDB debugger version.
+
+Syntax: version
+----

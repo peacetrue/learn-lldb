@@ -1,0 +1,23 @@
+= platform-process-attach
+
+----
+Attach to a process.
+
+Syntax: platform process attach <cmd-options>
+
+Command Options Usage:
+  platform process attach [-p <pid>] [-P <plugin>]
+  platform process attach [-w] [-n <process-name>] [-P <plugin>]
+
+       -P <plugin> ( --plugin <plugin> )
+            Name of the process plugin you want to use.
+
+       -n <process-name> ( --name <process-name> )
+            The name of the process to attach to.
+
+       -p <pid> ( --pid <pid> )
+            The process ID of an existing process to attach to.
+
+       -w ( --waitfor )
+            Wait for the process with <process-name> to launch.
+----

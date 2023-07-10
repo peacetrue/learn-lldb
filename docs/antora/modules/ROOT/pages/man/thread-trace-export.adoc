@@ -1,0 +1,13 @@
+= thread-trace-export
+
+----
+Commands for exporting traces of the threads in the current process to different formats.
+
+Syntax: thread trace export <export-plugin> [<subcommand objects>]
+
+The following subcommands are supported:
+
+      ctf -- Export a given thread's trace to Chrome Trace Format
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

@@ -1,0 +1,25 @@
+= session-history
+
+----
+Dump the history of commands in this session.
+Commands in the history list can be run again using "!<INDEX>".   "!-<OFFSET>" will re-run the command that is <OFFSET> commands from the end of the
+list (counting the current command).
+
+Syntax: session history <cmd-options>
+
+Command Options Usage:
+  session history [-c <unsigned-integer>] [-e <unsigned-integer>] [-s <unsigned-integer>]
+  session history [-C]
+
+       -C ( --clear )
+            Clears the current command history.
+
+       -c <unsigned-integer> ( --count <unsigned-integer> )
+            How many history commands to print.
+
+       -e <unsigned-integer> ( --end-index <unsigned-integer> )
+            Index at which to stop printing history commands.
+
+       -s <unsigned-integer> ( --start-index <unsigned-integer> )
+            Index at which to start printing history commands (or end to mean tail mode).
+----

@@ -1,0 +1,14 @@
+= jump
+
+----
+Set the program counter to a new address.  Expects 'raw' input (see 'help raw-input'.)
+
+Syntax: 
+_regexp-jump <line>
+_regexp-jump +<line-offset> | -<line-offset>
+_regexp-jump <file>:<line>
+_regexp-jump *<addr>
+
+
+'jump' is an abbreviation for '_regexp-jump'
+----

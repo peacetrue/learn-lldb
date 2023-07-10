@@ -1,0 +1,8 @@
+= reproducer-status
+
+----
+Show the current reproducer status. In capture mode the debugger is collecting all the information it needs to create a reproducer.  In replay mode the
+reproducer is replaying a reproducer. When the reproducers are off, no data is collected and no reproducer can be generated.
+
+Syntax: reproducer status
+----

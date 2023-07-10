@@ -1,0 +1,27 @@
+= thread-until
+
+----
+Continue until a line number or address is reached by the current or specified thread.  Stops when returning from the current function as a safety
+measure.  The target line number(s) are given as arguments, and if more than one is provided, stepping will stop when the first one is hit.
+
+Syntax: thread until <cmd-options> <linenum>
+
+Command Options Usage:
+  thread until [-a <address-expression>] [-f <frame-index>] [-m <run-mode>] [-t <thread-index>] <linenum>
+
+       -a <address-expression> ( --address <address-expression> )
+            Run until we reach the specified address, or leave the function - can be specified multiple times.
+
+       -f <frame-index> ( --frame <frame-index> )
+            Frame index for until operation - defaults to 0
+
+       -m <run-mode> ( --run-mode <run-mode> )
+            Determine how to run other threads while stepping this one
+            Values: this-thread | all-threads
+
+       -t <thread-index> ( --thread <thread-index> )
+            Thread index for the thread for until operation
+     
+     This command takes options and free-form arguments.  If your arguments resemble option specifiers (i.e., they start with a - or --), you must use '
+     -- ' between the end of the command options and the beginning of the arguments.
+----

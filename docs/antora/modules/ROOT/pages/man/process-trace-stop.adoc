@@ -1,0 +1,7 @@
+= process-trace-stop
+
+----
+Stop tracing this process. This does not affect traces started with the "thread trace start" command.
+
+Syntax: process trace stop
+----

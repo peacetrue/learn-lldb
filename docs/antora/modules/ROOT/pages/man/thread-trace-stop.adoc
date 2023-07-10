@@ -1,0 +1,9 @@
+= thread-trace-stop
+
+----
+Stop tracing threads, including the ones traced with the "process trace start" command.Defaults to the current thread. Thread indices can be specified
+as arguments.
+Use the thread-index "all" to stop tracing for all existing threads.
+
+Syntax: thread trace stop [<thread-index> <thread-index> ...]
+----

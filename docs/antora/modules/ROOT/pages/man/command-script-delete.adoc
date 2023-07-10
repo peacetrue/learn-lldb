@@ -1,0 +1,7 @@
+= command-script-delete
+
+----
+Delete a scripted command by specifying the path to the command.
+
+Syntax: command script delete <command> [<command> [...]]
+----

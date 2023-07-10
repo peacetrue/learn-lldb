@@ -1,0 +1,7 @@
+= platform-file-close
+
+----
+Close a file on the remote end.
+
+Syntax: platform file close <unsigned-integer>
+----

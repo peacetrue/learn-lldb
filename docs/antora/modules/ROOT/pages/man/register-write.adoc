@@ -1,0 +1,7 @@
+= register-write
+
+----
+Modify a single register value.
+
+Syntax: register write <register-name> <value>
+----

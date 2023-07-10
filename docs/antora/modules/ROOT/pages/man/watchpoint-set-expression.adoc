@@ -1,0 +1,31 @@
+= watchpoint-set-expression
+
+----
+Set a watchpoint on an address by supplying an expression. Use the '-w' option to specify the type of watchpoint and the '-s' option to specify the byte
+size to watch for. If no '-w' option is specified, it defaults to write. If no '-s' option is specified, it defaults to the target's pointer byte size.
+Note that there are limited hardware resources for watchpoints. If watchpoint setting fails, consider disable/delete existing ones to free up resources.
+Expects 'raw' input (see 'help raw-input'.)
+
+Syntax: watchpoint set expression <cmd-options> -- <expr>
+
+Command Options Usage:
+  watchpoint set expression [-w <watch-type>] [-s <byte-size>] -- <expr>
+  watchpoint set expression <expr>
+
+       -s <byte-size> ( --size <byte-size> )
+            Number of bytes to use to watch a region.
+            Values: 1 | 2 | 4 | 8
+
+       -w <watch-type> ( --watch <watch-type> )
+            Specify the type of watching to perform.
+            Values: read | write | read_write
+
+Examples:
+
+(lldb) watchpoint set expression -w write -s 1 -- foo + 32
+
+    Watches write access for the 1-byte region pointed to by the address 'foo + 32'
+     
+     This command takes options and free-form arguments.  If your arguments resemble option specifiers (i.e., they start with a - or --), you must use '
+     -- ' between the end of the command options and the beginning of the arguments.
+----

@@ -1,0 +1,7 @@
+= command-delete
+
+----
+Delete one or more custom commands defined by 'command regex'.
+
+Syntax: command delete <cmd-name>
+----

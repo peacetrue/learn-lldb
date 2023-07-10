@@ -1,0 +1,7 @@
+= watchpoint-enable
+
+----
+Enable the specified disabled watchpoint(s). If no watchpoints are specified, enable all of them.
+
+Syntax: watchpoint enable [<watchpt-id | watchpt-id-list>]
+----

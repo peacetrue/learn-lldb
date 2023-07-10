@@ -1,0 +1,19 @@
+= language-renderscript
+
+----
+Commands for operating on the RenderScript runtime.
+
+Syntax: renderscript <subcommand> [<subcommand-options>]
+
+The following subcommands are supported:
+
+      allocation  -- Commands that deal with RenderScript allocations.
+      context     -- Commands that deal with RenderScript contexts.
+      kernel      -- Commands that deal with RenderScript kernels.
+      module      -- Commands that deal with RenderScript modules.
+      reduction   -- Commands that handle general reduction kernels
+      scriptgroup -- Command set for interacting with scriptgroups.
+      status      -- Displays current RenderScript runtime status.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

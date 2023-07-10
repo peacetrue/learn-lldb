@@ -1,0 +1,7 @@
+= apropos
+
+----
+List debugger commands related to a word or subject.
+
+Syntax: apropos <search-word>
+----

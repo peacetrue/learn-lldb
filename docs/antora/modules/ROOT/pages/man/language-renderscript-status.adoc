@@ -1,0 +1,7 @@
+= language-renderscript-status
+
+----
+Displays current RenderScript runtime status.
+
+Syntax: renderscript status
+----

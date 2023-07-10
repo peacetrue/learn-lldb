@@ -1,0 +1,7 @@
+= frame-recognizer-info
+
+----
+Show which frame recognizer is applied a stack frame (if any).
+
+Syntax: frame recognizer info <frame-index>
+----

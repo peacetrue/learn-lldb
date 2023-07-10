@@ -1,0 +1,7 @@
+= statistics-enable
+
+----
+Enable statistics collection
+
+Syntax: enable
+----

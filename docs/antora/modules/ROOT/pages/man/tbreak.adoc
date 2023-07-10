@@ -1,0 +1,34 @@
+= tbreak
+
+----
+Set a one-shot breakpoint using one of several shorthand formats.  Expects 'raw' input (see 'help raw-input'.)
+
+Syntax: 
+_regexp-break <filename>:<linenum>:<colnum>
+              main.c:12:21          // Break at line 12 and column 21 of main.c
+
+_regexp-break <filename>:<linenum>
+              main.c:12             // Break at line 12 of main.c
+
+_regexp-break <linenum>
+              12                    // Break at line 12 of current file
+
+_regexp-break 0x<address>
+              0x1234000             // Break at address 0x1234000
+
+_regexp-break <name>
+              main                  // Break in 'main' after the prologue
+
+_regexp-break &<name>
+              &main                 // Break at first instruction in 'main'
+
+_regexp-break <module>`<name>
+              libc.so`malloc        // Break in 'malloc' from 'libc.so'
+
+_regexp-break /<source-regex>/
+              /break here/          // Break on source lines in current file
+                                    // containing text 'break here'.
+
+
+'tbreak' is an abbreviation for '_regexp-tbreak'
+----

@@ -1,0 +1,17 @@
+= thread-plan
+
+----
+Commands for managing thread plans that control execution.
+
+Syntax: thread plan <subcommand> [<subcommand objects]
+
+The following subcommands are supported:
+
+      discard -- Discards thread plans up to and including the specified index (see 'thread plan list'.)  Only user visible plans can be discarded.
+      list    -- Show thread plans for one or more threads.  If no threads are specified, show the current thread.  Use the thread-index "all" to see
+                 all threads.
+      prune   -- Removes any thread plans associated with currently unreported threads.  Specify one or more TID's to remove, or if no TID's are
+                 provides, remove threads for all unreported threads
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

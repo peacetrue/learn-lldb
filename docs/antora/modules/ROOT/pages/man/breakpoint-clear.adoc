@@ -1,0 +1,16 @@
+= breakpoint-clear
+
+----
+Delete or disable breakpoints matching the specified source file and line.
+
+Syntax: breakpoint clear <cmd-options>
+
+Command Options Usage:
+  breakpoint clear -l <linenum> [-f <filename>]
+
+       -f <filename> ( --file <filename> )
+            Specify the breakpoint by source location in this particular file.
+
+       -l <linenum> ( --line <linenum> )
+            Specify the breakpoint by source location at this particular line.
+----

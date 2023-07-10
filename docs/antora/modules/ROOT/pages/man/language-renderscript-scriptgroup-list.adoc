@@ -1,0 +1,7 @@
+= language-renderscript-scriptgroup-list
+
+----
+List all currently discovered script groups.
+
+Syntax: renderscript scriptgroup list
+----

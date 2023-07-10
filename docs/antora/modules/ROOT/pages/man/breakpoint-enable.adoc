@@ -1,0 +1,7 @@
+= breakpoint-enable
+
+----
+Enable the specified disabled breakpoint(s). If no breakpoints are specified, enable all of them.
+
+Syntax: breakpoint enable [<breakpt-id | breakpt-id-list>]
+----

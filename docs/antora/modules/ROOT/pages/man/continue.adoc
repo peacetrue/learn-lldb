@@ -1,0 +1,20 @@
+= continue
+
+----
+Continue execution of all threads in the current process.
+
+Syntax: continue <cmd-options>
+
+Command Options Usage:
+  continue [-i <unsigned-integer>]
+  continue [-b <breakpt-id-list>]
+
+       -b <breakpt-id-list> ( --continue-to-bkpt <breakpt-id-list> )
+            Specify a breakpoint to continue to, temporarily ignoring other breakpoints.  Can be specified more than once.  The continue action will be
+            done synchronously if this option is specified.
+
+       -i <unsigned-integer> ( --ignore-count <unsigned-integer> )
+            Ignore <N> crossings of the breakpoint (if it exists) for the currently selected thread.
+
+'continue' is an abbreviation for 'process continue'
+----

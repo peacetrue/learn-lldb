@@ -1,0 +1,17 @@
+= session
+
+----
+Commands controlling LLDB session.
+
+Syntax: session <subcommand> [<command-options>]
+
+The following subcommands are supported:
+
+      history -- Dump the history of commands in this session.
+                 Commands in the history list can be run again using "!<INDEX>".   "!-<OFFSET>" will re-run the command that is <OFFSET> commands from
+                 the end of the list (counting the current command).
+      save    -- Save the current session transcripts to a file.
+                 If no file if specified, transcripts will be saved to a temporary file.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

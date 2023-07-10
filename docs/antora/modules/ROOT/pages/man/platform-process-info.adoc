@@ -1,0 +1,7 @@
+= platform-process-info
+
+----
+Get detailed information for one or more process by process ID.
+
+Syntax: platform process info <pid> [<pid> <pid> ...]
+----

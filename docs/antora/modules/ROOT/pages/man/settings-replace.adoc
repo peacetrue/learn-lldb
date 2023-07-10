@@ -1,0 +1,7 @@
+= settings-replace
+
+----
+Replace the debugger setting value specified by array index or dictionary key.  Expects 'raw' input (see 'help raw-input'.)
+
+Syntax: settings replace <setting-variable-name> <setting-index | setting-key> <value>
+----

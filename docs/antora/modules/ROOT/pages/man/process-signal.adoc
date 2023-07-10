@@ -1,0 +1,7 @@
+= process-signal
+
+----
+Send a UNIX signal to the current target process.
+
+Syntax: process signal <unix-signal>
+----

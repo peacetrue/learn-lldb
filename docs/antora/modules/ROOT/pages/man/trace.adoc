@@ -1,0 +1,15 @@
+= trace
+
+----
+Commands for loading and using processor trace information.
+
+Syntax: trace [<sub-command-options>]
+
+The following subcommands are supported:
+
+      dump   -- Dump the loaded processor trace data.
+      load   -- Load a post-mortem processor trace session from a trace bundle.
+      schema -- Show the schema of the given trace plugin.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

@@ -1,0 +1,7 @@
+= memory-tag-read
+
+----
+Read memory tags for the given range of memory. Mismatched tags will be marked.
+
+Syntax: memory tag read <address-expression> [<address-expression>]
+----

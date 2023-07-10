@@ -1,0 +1,9 @@
+= display
+
+----
+Evaluate an expression at every stop (see 'help target stop-hook'.)  Expects 'raw' input (see 'help raw-input'.)
+
+Syntax: _regexp-display expression
+
+'display' is an abbreviation for '_regexp-display'
+----

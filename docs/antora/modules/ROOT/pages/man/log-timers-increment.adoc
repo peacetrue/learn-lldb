@@ -1,0 +1,7 @@
+= log-timers-increment
+
+----
+increment LLDB internal performance timers
+
+Syntax: log timers increment <bool>
+----

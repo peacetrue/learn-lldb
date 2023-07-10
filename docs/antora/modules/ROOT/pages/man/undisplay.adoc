@@ -1,0 +1,9 @@
+= undisplay
+
+----
+Stop displaying expression at every stop (specified by stop-hook index.)  Expects 'raw' input (see 'help raw-input'.)
+
+Syntax: _regexp-undisplay stop-hook-number
+
+'undisplay' is an abbreviation for '_regexp-undisplay'
+----

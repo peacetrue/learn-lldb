@@ -1,0 +1,9 @@
+= q
+
+----
+Quit the LLDB debugger.
+
+Syntax: q <unsigned-integer>
+
+'q' is an abbreviation for 'quit'
+----

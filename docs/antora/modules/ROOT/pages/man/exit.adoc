@@ -1,0 +1,9 @@
+= exit
+
+----
+Quit the LLDB debugger.
+
+Syntax: exit <unsigned-integer>
+
+'exit' is an abbreviation for 'quit'
+----

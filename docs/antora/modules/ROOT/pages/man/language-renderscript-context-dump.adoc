@@ -1,0 +1,7 @@
+= language-renderscript-context-dump
+
+----
+Dumps renderscript context information.
+
+Syntax: renderscript context dump
+----

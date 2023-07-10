@@ -1,0 +1,14 @@
+= plugin
+
+----
+Commands for managing LLDB plugins.
+
+Syntax: plugin <subcommand> [<subcommand-options>]
+
+The following subcommands are supported:
+
+      load            -- Import a dylib that implements an LLDB plugin.
+      structured-data -- Parent for per-plugin structured data commands
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

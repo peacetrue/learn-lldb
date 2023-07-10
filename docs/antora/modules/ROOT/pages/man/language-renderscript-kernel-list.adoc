@@ -1,0 +1,7 @@
+= language-renderscript-kernel-list
+
+----
+Lists renderscript kernel names and associated script resources.
+
+Syntax: renderscript kernel list
+----

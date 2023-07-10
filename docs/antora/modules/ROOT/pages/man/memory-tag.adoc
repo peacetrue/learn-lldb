@@ -1,0 +1,14 @@
+= memory-tag
+
+----
+Commands for manipulating memory tags
+
+Syntax: memory tag <sub-command> [<sub-command-options>]
+
+The following subcommands are supported:
+
+      read  -- Read memory tags for the given range of memory. Mismatched tags will be marked.
+      write -- Write memory tags starting from the granule that contains the given address.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

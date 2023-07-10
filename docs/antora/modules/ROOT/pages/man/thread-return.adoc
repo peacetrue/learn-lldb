@@ -1,0 +1,18 @@
+= thread-return
+
+----
+Prematurely return from a stack frame, short-circuiting execution of newer frames and optionally yielding a specified value.  Defaults to the exiting
+the current stack frame.  Expects 'raw' input (see 'help raw-input'.)
+
+Syntax: thread return
+
+Command Options Usage:
+  thread return [-x] -- [<expr>]
+  thread return [<expr>]
+
+       -x ( --from-expression )
+            Return from the innermost expression evaluation.
+     
+     Important Note: Because this command takes 'raw' input, if you use any command options you must use ' -- ' between the end of the command options
+     and the beginning of the raw input.
+----

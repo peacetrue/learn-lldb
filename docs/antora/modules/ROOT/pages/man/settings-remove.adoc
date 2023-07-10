@@ -1,0 +1,7 @@
+= settings-remove
+
+----
+Remove a value from a setting, specified by array index or dictionary key.  Expects 'raw' input (see 'help raw-input'.)
+
+Syntax: settings remove <setting-variable-name> <setting-index | setting-key>
+----

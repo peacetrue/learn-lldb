@@ -1,0 +1,17 @@
+= command-script
+
+----
+Commands for managing custom commands implemented by interpreter scripts.
+
+Syntax: command script <subcommand> [<subcommand-options>]
+
+The following subcommands are supported:
+
+      add    -- Add a scripted function as an LLDB command.
+      clear  -- Delete all scripted commands.
+      delete -- Delete a scripted command by specifying the path to the command.
+      import -- Import a scripting module in LLDB.
+      list   -- List defined top-level scripted commands.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

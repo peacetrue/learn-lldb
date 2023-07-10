@@ -1,0 +1,7 @@
+= target-select
+
+----
+Select a target as the current target by target index.
+
+Syntax: target select <target-id>
+----

@@ -1,0 +1,8 @@
+= type-synthetic-info
+
+----
+This command evaluates the provided expression and shows which synthetic is applied to the resulting value (if any).  Expects 'raw' input (see 'help
+raw-input'.)
+
+Syntax: type synthetic info <expr>
+----

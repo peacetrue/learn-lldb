@@ -1,0 +1,13 @@
+= language-renderscript-reduction
+
+----
+Commands that handle general reduction kernels
+
+Syntax: renderscript reduction
+
+The following subcommands are supported:
+
+      breakpoint -- Commands that manipulate breakpoints on renderscript general reductions.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

@@ -1,0 +1,7 @@
+= frame-recognizer-delete
+
+----
+Delete an existing frame recognizer by id.
+
+Syntax: frame recognizer delete <(null)>
+----

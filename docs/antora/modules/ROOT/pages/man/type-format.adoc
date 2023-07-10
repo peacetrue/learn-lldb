@@ -1,0 +1,18 @@
+= type-format
+
+----
+Commands for customizing value display formats.
+
+Syntax: type format [<sub-command-options>] 
+
+The following subcommands are supported:
+
+      add    -- Add a new formatting style for a type.
+      clear  -- Delete all existing format styles.
+      delete -- Delete an existing formatting style for a type.
+      info   -- This command evaluates the provided expression and shows which format is applied to the resulting value (if any).  Expects 'raw' input
+                (see 'help raw-input'.)
+      list   -- Show a list of current formats.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

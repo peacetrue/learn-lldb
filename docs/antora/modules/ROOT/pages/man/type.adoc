@@ -1,0 +1,19 @@
+= type
+
+----
+Commands for operating on the type system.
+
+Syntax: type [<sub-command-options>]
+
+The following subcommands are supported:
+
+      category  -- Commands for operating on type categories.
+      filter    -- Commands for operating on type filters.
+      format    -- Commands for customizing value display formats.
+      lookup    -- Lookup types and declarations in the current target, following language-specific naming conventions.  Expects 'raw' input (see 'help
+                   raw-input'.)
+      summary   -- Commands for editing variable summary display options.
+      synthetic -- Commands for operating on synthetic type representations.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

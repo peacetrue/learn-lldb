@@ -1,0 +1,8 @@
+= type-summary-info
+
+----
+This command evaluates the provided expression and shows which summary is applied to the resulting value (if any).  Expects 'raw' input (see 'help
+raw-input'.)
+
+Syntax: type summary info <expr>
+----

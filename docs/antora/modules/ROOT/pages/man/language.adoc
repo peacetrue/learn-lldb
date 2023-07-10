@@ -1,0 +1,16 @@
+= language
+
+----
+Commands specific to a source language.
+
+Syntax: language <language-name> <subcommand> [<subcommand-options>]
+
+The following subcommands are supported:
+
+      cplusplus    -- Commands for operating on the C++ language runtime.
+      objc         -- Commands for operating on the Objective-C language runtime.
+      renderscript -- Commands for operating on the RenderScript runtime.
+      swift        -- A set of commands for operating on the Swift Language Runtime.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

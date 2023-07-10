@@ -1,0 +1,7 @@
+= language-renderscript-kernel-coordinate
+
+----
+Shows the (x,y,z) coordinate of the current kernel invocation.
+
+Syntax: renderscript kernel coordinate
+----

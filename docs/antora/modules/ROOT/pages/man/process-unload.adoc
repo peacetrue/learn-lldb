@@ -1,0 +1,7 @@
+= process-unload
+
+----
+Unload a shared library from the current process using the index returned by a previous call to "process load".
+
+Syntax: process unload <index>
+----

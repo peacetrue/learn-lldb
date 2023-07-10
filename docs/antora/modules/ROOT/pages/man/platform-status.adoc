@@ -1,0 +1,7 @@
+= platform-status
+
+----
+Display status for the current platform.
+
+Syntax: platform status
+----

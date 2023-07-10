@@ -2,5 +2,5 @@
 * xref:start.adoc[]
 * xref:manual.adoc[]
 * xref:reference.adoc[]
-include::nav-man.adoc[]
+include::partial$nav-man.adoc[]
 * xref:version.adoc[]

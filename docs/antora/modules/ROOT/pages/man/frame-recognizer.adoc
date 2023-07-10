@@ -1,0 +1,17 @@
+= frame-recognizer
+
+----
+Commands for editing and viewing frame recognizers.
+
+Syntax: frame recognizer [<sub-command-options>] 
+
+The following subcommands are supported:
+
+      add    -- Add a new frame recognizer.
+      clear  -- Delete all frame recognizers.
+      delete -- Delete an existing frame recognizer by id.
+      info   -- Show which frame recognizer is applied a stack frame (if any).
+      list   -- Show a list of active frame recognizers.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

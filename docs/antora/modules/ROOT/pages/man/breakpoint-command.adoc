@@ -1,0 +1,16 @@
+= breakpoint-command
+
+----
+Commands for adding, removing and listing LLDB commands executed when a breakpoint is hit.
+
+Syntax: command <sub-command> [<sub-command-options>] <breakpoint-id>
+
+The following subcommands are supported:
+
+      add    -- Add LLDB commands to a breakpoint, to be executed whenever the breakpoint is hit.  The commands added to the breakpoint replace any
+                commands previously added to it.  If no breakpoint is specified, adds the commands to the last created breakpoint.
+      delete -- Delete the set of commands from a breakpoint.
+      list   -- List the script or set of commands to be executed when the breakpoint is hit.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

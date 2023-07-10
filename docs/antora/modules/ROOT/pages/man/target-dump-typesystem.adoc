@@ -1,0 +1,8 @@
+= target-dump-typesystem
+
+----
+Dump the state of the target's internal type system.
+Intended to be used for debugging LLDB itself.
+
+Syntax: target dump typesystem
+----

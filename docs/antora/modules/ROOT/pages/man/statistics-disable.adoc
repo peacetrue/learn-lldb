@@ -1,0 +1,7 @@
+= statistics-disable
+
+----
+Disable statistics collection
+
+Syntax: disable
+----

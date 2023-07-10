@@ -1,0 +1,7 @@
+= target-modules-dump-ast
+
+----
+Dump the clang ast for a given module's symbol file.
+
+Syntax: target modules dump ast [<filename> [<filename> [...]]]
+----

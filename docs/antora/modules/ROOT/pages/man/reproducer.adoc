@@ -1,0 +1,24 @@
+= reproducer
+
+----
+Commands for manipulating reproducers. Reproducers make it possible to capture full debug sessions with all its dependencies. The resulting reproducer
+is used to replay the debug session while debugging the debugger.
+Because reproducers need the whole the debug session from beginning to end, you need to launch the debugger in capture or replay mode, commonly though
+the command line driver.
+Reproducers are unrelated record-replay debugging, as you cannot interact with the debugger during replay.
+
+Syntax: reproducer <subcommand> [<subcommand-options>]
+
+The following subcommands are supported:
+
+      dump     -- Dump the information contained in a reproducer. If no reproducer is specified during replay, it dumps the content of the current
+                  reproducer.
+      generate -- Generate reproducer on disk. When the debugger is in capture mode, this command will output the reproducer to a directory on disk and
+                  quit. In replay mode this command in a no-op.
+      status   -- Show the current reproducer status. In capture mode the debugger is collecting all the information it needs to create a reproducer. 
+                  In replay mode the reproducer is replaying a reproducer. When the reproducers are off, no data is collected and no reproducer can be
+                  generated.
+      xcrash   -- Intentionally force  the debugger to crash in order to trigger and test reproducer generation.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

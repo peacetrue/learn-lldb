@@ -1,0 +1,100 @@
+= var
+
+----
+Show variables for the current stack frame. Defaults to all arguments and local variables in scope. Names of argument, local, file static and file
+global variables can be specified.
+
+Syntax: var <cmd-options> [<variable-name> [<variable-name> [...]]]
+
+Command Options Usage:
+  var [-AFLORTacglrst] [-y <name>] [-z <name>] [-f <format>] [-G <gdb-format>] [-d <none>] [-S <boolean>] [-D <count>] [-P <count>] [-Y[<count>]] [-V <boolean>] [-Z <count>] [<variable-name> [<variable-name> [...]]]
+
+       -A ( --show-all-children )
+            Ignore the upper bound on the number of children to show.
+
+       -D <count> ( --depth <count> )
+            Set the max recurse depth when dumping aggregate types (default is infinity).
+
+       -F ( --flat )
+            Display results in a flat format that uses expression paths for each variable or member.
+
+       -G <gdb-format> ( --gdb-format <gdb-format> )
+            Specify a format using a GDB format specifier string.
+
+       -L ( --location )
+            Show variable location information.
+
+       -O ( --object-description )
+            Display using a language-specific description API, if possible.
+
+       -P <count> ( --ptr-depth <count> )
+            The number of pointers to be traversed when dumping values (default is zero).
+
+       -R ( --raw-output )
+            Don't use formatting options.
+
+       -S <boolean> ( --synthetic-type <boolean> )
+            Show the object obeying its synthetic provider, if available.
+
+       -T ( --show-types )
+            Show variable types when dumping values.
+
+       -V <boolean> ( --validate <boolean> )
+            Show results of type validators.
+
+       -Y[<count>] ( --no-summary-depth=[<count>] )
+            Set the depth at which omitting summary information stops (default is 1).
+
+       -Z <count> ( --element-count <count> )
+            Treat the result of the expression as if its type is an array of this many values.
+
+       -a ( --no-args )
+            Omit function arguments.
+
+       -c ( --show-declaration )
+            Show variable declaration information (source file and line where the variable was declared).
+
+       -d <none> ( --dynamic-type <none> )
+            Show the object as its full dynamic type, not its static type, if available.
+            Values: no-dynamic-values | run-target | no-run-target
+
+       -f <format> ( --format <format> )
+            Specify a format to be used for display.
+
+       -g ( --show-globals )
+            Show the current frame source file global and static variables.
+
+       -l ( --no-locals )
+            Omit local variables.
+
+       -r ( --regex )
+            The <variable-name> argument for name lookups are regular expressions.
+
+       -s ( --scope )
+            Show variable scope (argument, local, global, static).
+
+       -t ( --no-recognized-args )
+            Omit recognized function arguments.
+
+       -y <name> ( --summary <name> )
+            Specify the summary that the variable output should use.
+
+       -z <name> ( --summary-string <name> )
+            Specify a summary string to use to format the variable output.
+
+Children of aggregate variables can be specified such as 'var->child.x'.  In
+'frame variable', the operators -> and [] do not invoke operator overloads if
+they exist, but directly access the specified element.  If you want to trigger
+operator overloads use the expression command to print the variable instead.
+
+It is worth noting that except for overloaded operators, when printing local
+variables 'expr local_var' and 'frame var local_var' produce the same results.
+However, 'frame variable' is more efficient, since it uses debug information and
+memory reads directly, rather than parsing and evaluating an expression, which
+may even involve JITing and running code in the target program.
+     
+     This command takes options and free-form arguments.  If your arguments resemble option specifiers (i.e., they start with a - or --), you must use '
+     -- ' between the end of the command options and the beginning of the arguments.
+
+'var' is an abbreviation for 'frame variable'
+----

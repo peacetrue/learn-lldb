@@ -1,0 +1,67 @@
+= type-format-add
+
+----
+Add a new formatting style for a type.
+
+Syntax: type format add <cmd-options> <name> [<name> [...]]
+
+Command Options Usage:
+  type format add [-prx] [-f <format>] [-C <boolean>] [-w <name>] <name> [<name> [...]]
+  type format add [-prx] [-C <boolean>] [-w <name>] [-t <name>] <name> [<name> [...]]
+
+       -C <boolean> ( --cascade <boolean> )
+            If true, cascade through typedef chains.
+
+       -f <format> ( --format <format> )
+            Specify a format to be used for display.
+
+       -p ( --skip-pointers )
+            Don't use this format for pointers-to-type objects.
+
+       -r ( --skip-references )
+            Don't use this format for references-to-type objects.
+
+       -t <name> ( --type <name> )
+            Format variables as if they were of this type.
+
+       -w <name> ( --category <name> )
+            Add this to the given category instead of the default one.
+
+       -x ( --regex )
+            Type names are actually regular expressions.
+
+The following examples of 'type format add' refer to this code snippet for context:
+
+    typedef int Aint;
+    typedef float Afloat;
+    typedef Aint Bint;
+    typedef Afloat Bfloat;
+
+    Aint ix = 5;
+    Bint iy = 5;
+
+    Afloat fx = 3.14;
+    BFloat fy = 3.14;
+
+Adding default formatting:
+
+(lldb) type format add -f hex AInt
+(lldb) frame variable iy
+
+    Produces hexadecimal display of iy, because no formatter is available for Bint and the one for Aint is used instead.
+
+To prevent this use the cascade option '-C no' to prevent evaluation of typedef chains:
+
+
+(lldb) type format add -f hex -C no AInt
+
+Similar reasoning applies to this:
+
+(lldb) type format add -f hex -C no float -p
+
+    All float values and float references are now formatted as hexadecimal, but not pointers to floats.  Nor will it change the default display for
+    Afloat and Bfloat objects.
+     
+     This command takes options and free-form arguments.  If your arguments resemble option specifiers (i.e., they start with a - or --), you must use '
+     -- ' between the end of the command options and the beginning of the arguments.
+----

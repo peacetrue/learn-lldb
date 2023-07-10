@@ -1,0 +1,9 @@
+= image
+
+----
+Commands for accessing information for one or more target modules.
+
+Syntax: image
+
+'image' is an abbreviation for 'target modules'
+----

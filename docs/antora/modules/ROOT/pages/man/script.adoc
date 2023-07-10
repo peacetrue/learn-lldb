@@ -1,0 +1,18 @@
+= script
+
+----
+Invoke the script interpreter with provided code and display any results.  Start the interactive interpreter if no code is supplied.  Expects 'raw'
+input (see 'help raw-input'.)
+
+Syntax: script [--language <scripting-language> --] [<script-code>]
+
+Command Options Usage:
+  script [-l <script-language>]
+
+       -l <script-language> ( --language <script-language> )
+            Specify the scripting  language. If none is specific the default scripting language is used.
+            Values: python | lua | default
+     
+     Important Note: Because this command takes 'raw' input, if you use any command options you must use ' -- ' between the end of the command options
+     and the beginning of the raw input.
+----

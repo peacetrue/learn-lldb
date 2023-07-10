@@ -1,0 +1,16 @@
+= breakpoint-read
+
+----
+Read and set the breakpoints previously saved to a file with "breakpoint write".  
+
+Syntax: breakpoint read <cmd-options>
+
+Command Options Usage:
+  breakpoint read -f <filename> [-N <breakpoint-name>]
+
+       -N <breakpoint-name> ( --breakpoint-name <breakpoint-name> )
+            Only read in breakpoints with this name.
+
+       -f <filename> ( --file <filename> )
+            The file from which to read the breakpoints.
+----

@@ -1,0 +1,17 @@
+= process-trace
+
+----
+Commands for tracing the current process.
+
+Syntax: process trace <subcommand> [<subcommand objects>]
+
+The following subcommands are supported:
+
+      save  -- Save the trace of the current process in the specified directory. The directory will be created if needed. This will also create a file
+               <directory>/trace.json with the main properties of the trace session, along with others files which contain the actual trace data. The
+               trace.json file can be used later as input for the "trace load" command to load the trace in LLDB
+      start -- Start tracing this process with the corresponding trace plug-in.
+      stop  -- Stop tracing this process. This does not affect traces started with the "thread trace start" command.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

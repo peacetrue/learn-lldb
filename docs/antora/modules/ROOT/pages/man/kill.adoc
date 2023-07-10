@@ -1,0 +1,9 @@
+= kill
+
+----
+Terminate the current target process.
+
+Syntax: kill
+
+'kill' is an abbreviation for 'process kill'
+----

@@ -1,0 +1,21 @@
+= breakpoint-disable
+
+----
+Disable the specified breakpoint(s) without deleting them.  If none are specified, disable all breakpoints.
+
+Syntax: breakpoint disable [<breakpt-id | breakpt-id-list>]
+Disable the specified breakpoint(s) without deleting them.  If none are specified, disable all breakpoints.
+
+Note: disabling a breakpoint will cause none of its locations to be hit regardless of whether individual locations are enabled or disabled.  After the
+sequence:
+
+    (lldb) break disable 1
+    (lldb) break enable 1.1
+
+execution will NOT stop at location 1.1.  To achieve that, type:
+
+    (lldb) break disable 1.*
+    (lldb) break enable 1.1
+
+The first command disables all locations for breakpoint 1, the second re-enables the first location.
+----

@@ -1,0 +1,7 @@
+= frame-recognizer-clear
+
+----
+Delete all frame recognizers.
+
+Syntax: frame recognizer clear
+----

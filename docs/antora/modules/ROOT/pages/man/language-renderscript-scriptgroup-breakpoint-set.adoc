@@ -1,0 +1,7 @@
+= language-renderscript-scriptgroup-breakpoint-set
+
+----
+Place a breakpoint on all kernels forming a script group.
+
+Syntax: renderscript scriptgroup breakpoint set <group_name>
+----

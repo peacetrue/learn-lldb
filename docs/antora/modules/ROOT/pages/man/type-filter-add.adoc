@@ -1,0 +1,59 @@
+= type-filter-add
+
+----
+Add a new filter for a type.
+
+Syntax: type filter add <cmd-options> <name> [<name> [...]]
+
+Command Options Usage:
+  type filter add [-prx] [-C <boolean>] [-w <name>] [-c <expr-path>] <name> [<name> [...]]
+
+       -C <boolean> ( --cascade <boolean> )
+            If true, cascade through typedef chains.
+
+       -c <expr-path> ( --child <expr-path> )
+            Include this expression path in the synthetic view.
+
+       -p ( --skip-pointers )
+            Don't use this format for pointers-to-type objects.
+
+       -r ( --skip-references )
+            Don't use this format for references-to-type objects.
+
+       -w <name> ( --category <name> )
+            Add this to the given category instead of the default one.
+
+       -x ( --regex )
+            Type names are actually regular expressions.
+
+The following examples of 'type filter add' refer to this code snippet for context:
+
+    class Foo {
+        int a;
+        int b;
+        int c;
+        int d;
+        int e;
+        int f;
+        int g;
+        int h;
+        int i;
+    }
+    Foo my_foo;
+
+Adding a simple filter:
+
+(lldb) type filter add --child a --child g Foo
+(lldb) frame variable my_foo
+
+Produces output where only a and g are displayed.  Other children of my_foo (b, c, d, e, f, h and i) are available by asking for them explicitly:
+
+(lldb) frame variable my_foo.b my_foo.c my_foo.i
+
+The formatting option --raw on frame variable bypasses the filter, showing all children of my_foo as if no filter was defined:
+
+(lldb) frame variable my_foo --raw
+     
+     This command takes options and free-form arguments.  If your arguments resemble option specifiers (i.e., they start with a - or --), you must use '
+     -- ' between the end of the command options and the beginning of the arguments.
+----

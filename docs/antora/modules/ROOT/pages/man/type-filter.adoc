@@ -1,0 +1,16 @@
+= type-filter
+
+----
+Commands for operating on type filters.
+
+Syntax: type filter [<sub-command-options>] 
+
+The following subcommands are supported:
+
+      add    -- Add a new filter for a type.
+      clear  -- Delete all existing filter.
+      delete -- Delete an existing filter for a type.
+      list   -- Show a list of current filters.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

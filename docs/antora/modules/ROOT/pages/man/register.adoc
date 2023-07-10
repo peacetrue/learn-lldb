@@ -1,0 +1,14 @@
+= register
+
+----
+Commands to access registers for the current thread and stack frame.
+
+Syntax: register [read|write] ...
+
+The following subcommands are supported:
+
+      read  -- Dump the contents of one or more register values from the current frame.  If no register is specified, dumps them all.
+      write -- Modify a single register value.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

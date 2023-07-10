@@ -1,0 +1,56 @@
+= platform-process-launch
+
+----
+Launch a new process on a remote platform.
+
+Syntax: platform process launch program
+
+Command Options Usage:
+  platform process launch [-s] [-a <arch>] [-A <boolean>] [-E <none>] [-P <plugin>] [-c[<filename>]] [-e <filename>] [-i <filename>] [-o <filename>] [-w <directory>] [<run-args> [<run-args> [...]]]
+  platform process launch [-st] [-a <arch>] [-A <boolean>] [-E <none>] [-P <plugin>] [-c[<filename>]] [-w <directory>] [<run-args> [<run-args> [...]]]
+  platform process launch [-ns] [-a <arch>] [-A <boolean>] [-E <none>] [-P <plugin>] [-c[<filename>]] [-w <directory>] [<run-args> [<run-args> [...]]]
+  platform process launch [-s] [-a <arch>] [-A <boolean>] [-E <none>] [-P <plugin>] [-X <boolean>] [-w <directory>] [<run-args> [<run-args> [...]]]
+
+       -A <boolean> ( --disable-aslr <boolean> )
+            Set whether to disable address space layout randomization when launching a process.
+
+       -E <none> ( --environment <none> )
+            Specify an environment variable name/value string (--environment NAME=VALUE). Can be specified multiple times for subsequent environment
+            entries.
+
+       -P <plugin> ( --plugin <plugin> )
+            Name of the process plugin you want to use.
+
+       -X <boolean> ( --shell-expand-args <boolean> )
+            Set whether to shell expand arguments to the process when launching.
+
+       -a <arch> ( --arch <arch> )
+            Set the architecture for the process to launch when ambiguous.
+
+       -c[<filename>] ( --shell=[<filename>] )
+            Run the process in a shell (not supported on all platforms).
+
+       -e <filename> ( --stderr <filename> )
+            Redirect stderr for the process to <filename>.
+
+       -i <filename> ( --stdin <filename> )
+            Redirect stdin for the process to <filename>.
+
+       -n ( --no-stdio )
+            Do not set up for terminal I/O to go to running process.
+
+       -o <filename> ( --stdout <filename> )
+            Redirect stdout for the process to <filename>.
+
+       -s ( --stop-at-entry )
+            Stop at the entry point of the program when launching a process.
+
+       -t ( --tty )
+            Start the process in a terminal (not supported on all platforms).
+
+       -w <directory> ( --working-dir <directory> )
+            Set the current working directory to <path> when running the inferior.
+     
+     This command takes options and free-form arguments.  If your arguments resemble option specifiers (i.e., they start with a - or --), you must use '
+     -- ' between the end of the command options and the beginning of the arguments.
+----

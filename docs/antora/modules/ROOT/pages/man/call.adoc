@@ -1,0 +1,9 @@
+= call
+
+----
+Evaluate an expression on the current thread.  Displays any returned value with LLDB's default formatting.  Expects 'raw' input (see 'help raw-input'.)
+
+Syntax: call <expr>
+  call <expr>
+'call' is an abbreviation for 'expression --'
+----

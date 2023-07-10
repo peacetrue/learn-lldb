@@ -1,0 +1,13 @@
+= language-cplusplus
+
+----
+Commands for operating on the C++ language runtime.
+
+Syntax: cplusplus <subcommand> [<subcommand-options>]
+
+The following subcommands are supported:
+
+      demangle -- Demangle a C++ mangled name.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

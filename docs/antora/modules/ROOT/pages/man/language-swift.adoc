@@ -1,0 +1,14 @@
+= language-swift
+
+----
+A set of commands for operating on the Swift Language Runtime.
+
+Syntax: swift <subcommand> [<subcommand-options>]
+
+The following subcommands are supported:
+
+      demangle -- Demangle a Swift mangled name
+      refcount -- Inspect the reference count data for a Swift object  Expects 'raw' input (see 'help raw-input'.)
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

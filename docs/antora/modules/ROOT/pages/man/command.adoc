@@ -1,0 +1,20 @@
+= command
+
+----
+Commands for managing custom LLDB commands.
+
+Syntax: command <subcommand> [<subcommand-options>]
+
+The following subcommands are supported:
+
+      alias     -- Define a custom command in terms of an existing command.  Expects 'raw' input (see 'help raw-input'.)
+      container -- Commands for adding container commands to lldb.  Container commands are containers for other commands.  You canadd nested container
+                   commands by specifying a command path, but but you can't add commands into the built-in command hierarchy.
+      delete    -- Delete one or more custom commands defined by 'command regex'.
+      regex     -- Define a custom command in terms of existing commands by matching regular expressions.
+      script    -- Commands for managing custom commands implemented by interpreter scripts.
+      source    -- Read and execute LLDB commands from the file <filename>.
+      unalias   -- Delete one or more custom commands defined by 'command alias'.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

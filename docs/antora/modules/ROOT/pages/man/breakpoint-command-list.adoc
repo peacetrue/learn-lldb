@@ -1,0 +1,7 @@
+= breakpoint-command-list
+
+----
+List the script or set of commands to be executed when the breakpoint is hit.
+
+Syntax: breakpoint command list <breakpt-id>
+----

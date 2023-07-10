@@ -1,0 +1,7 @@
+= target-modules-dump-sections
+
+----
+Dump the sections from one or more target modules.
+
+Syntax: target modules dump sections [<filename> [<filename> [...]]]
+----

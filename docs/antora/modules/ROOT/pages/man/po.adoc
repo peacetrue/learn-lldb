@@ -1,0 +1,10 @@
+= po
+
+----
+Evaluate an expression on the current thread.  Displays any returned value with formatting controlled by the type's author.  Expects 'raw' input (see
+'help raw-input'.)
+
+Syntax: po <expr>
+  po <expr>
+'po' is an abbreviation for 'expression -O  --'
+----

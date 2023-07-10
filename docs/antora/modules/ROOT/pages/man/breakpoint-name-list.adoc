@@ -1,0 +1,13 @@
+= breakpoint-name-list
+
+----
+List either the names for a breakpoint or info about a given name.  With no arguments, lists all names
+
+Syntax: breakpoint name list <command-options>
+
+Command Options Usage:
+  list [-D]
+
+       -D ( --dummy-breakpoints )
+            Operate on Dummy breakpoints - i.e. breakpoints set before a file is provided, which prime new targets.
+----

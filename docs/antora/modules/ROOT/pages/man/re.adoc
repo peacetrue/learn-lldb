@@ -1,0 +1,9 @@
+= re
+
+----
+Commands to access registers for the current thread and stack frame.
+
+Syntax: re
+
+'re' is an abbreviation for 'register'
+----

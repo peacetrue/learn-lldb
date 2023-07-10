@@ -1,0 +1,24 @@
+= breakpoint
+
+----
+Commands for operating on breakpoints (see 'help b' for shorthand.)
+
+Syntax: breakpoint <subcommand> [<command-options>]
+
+The following subcommands are supported:
+
+      clear   -- Delete or disable breakpoints matching the specified source file and line.
+      command -- Commands for adding, removing and listing LLDB commands executed when a breakpoint is hit.
+      delete  -- Delete the specified breakpoint(s).  If no breakpoints are specified, delete them all.
+      disable -- Disable the specified breakpoint(s) without deleting them.  If none are specified, disable all breakpoints.
+      enable  -- Enable the specified disabled breakpoint(s). If no breakpoints are specified, enable all of them.
+      list    -- List some or all breakpoints at configurable levels of detail.
+      modify  -- Modify the options on a breakpoint or set of breakpoints in the executable.  If no breakpoint is specified, acts on the last created
+                 breakpoint.  With the exception of -e, -d and -i, passing an empty argument clears the modification.
+      name    -- Commands to manage breakpoint names
+      read    -- Read and set the breakpoints previously saved to a file with "breakpoint write".  
+      set     -- Sets a breakpoint or set of breakpoints in the executable.
+      write   -- Write the breakpoints listed to a file that can be read in with "breakpoint read".  If given no arguments, writes all breakpoints.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

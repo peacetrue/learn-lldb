@@ -1,0 +1,19 @@
+= target-modules-dump
+
+----
+Commands for dumping information about one or more target modules.
+
+Syntax: target modules dump [objfile|symtab|sections|ast|symfile|line-table|pcm-info] [<file1> <file2> ...]
+
+The following subcommands are supported:
+
+      ast        -- Dump the clang ast for a given module's symbol file.
+      line-table -- Dump the line table for one or more compilation units.
+      objfile    -- Dump the object file headers from one or more target modules.
+      pcm-info   -- Dump information about the given clang module (pcm).
+      sections   -- Dump the sections from one or more target modules.
+      symfile    -- Dump the debug symbol file for one or more target modules.
+      symtab     -- Dump the symbol table from one or more target modules.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

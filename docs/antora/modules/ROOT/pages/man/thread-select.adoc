@@ -1,0 +1,7 @@
+= thread-select
+
+----
+Change the currently selected thread.
+
+Syntax: thread select <thread-index>
+----

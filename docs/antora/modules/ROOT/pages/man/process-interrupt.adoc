@@ -1,0 +1,7 @@
+= process-interrupt
+
+----
+Interrupt the current target process.
+
+Syntax: process interrupt
+----

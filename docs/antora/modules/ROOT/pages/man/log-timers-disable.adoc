@@ -1,0 +1,7 @@
+= log-timers-disable
+
+----
+disable LLDB internal performance timers
+
+Syntax: log timers disable
+----

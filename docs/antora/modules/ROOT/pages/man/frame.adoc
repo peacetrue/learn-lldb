@@ -1,0 +1,18 @@
+= frame
+
+----
+Commands for selecting and examing the current thread's stack frames.
+
+Syntax: frame <subcommand> [<subcommand-options>]
+
+The following subcommands are supported:
+
+      diagnose   -- Try to determine what path the current stop location used to get to a register or address
+      info       -- List information about the current stack frame in the current thread.
+      recognizer -- Commands for editing and viewing frame recognizers.
+      select     -- Select the current stack frame by index from within the current thread (see 'thread backtrace'.)
+      variable   -- Show variables for the current stack frame. Defaults to all arguments and local variables in scope. Names of argument, local, file
+                    static and file global variables can be specified.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

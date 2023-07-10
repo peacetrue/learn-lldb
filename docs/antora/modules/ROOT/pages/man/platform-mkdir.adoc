@@ -1,0 +1,46 @@
+= platform-mkdir
+
+----
+Make a new directory on the remote end.
+
+Syntax: platform mkdir <cmd-options> <path>
+
+Command Options Usage:
+  platform mkdir [-RWXdertwx] [-s <perms=string>] [-v <perms-numeric>] <path>
+
+       -R ( --group-read )
+            Allow group to read.
+
+       -W ( --group-write )
+            Allow group to write.
+
+       -X ( --group-exec )
+            Allow group to execute.
+
+       -d ( --world-read )
+            Allow world to read.
+
+       -e ( --world-exec )
+            Allow world to execute.
+
+       -r ( --user-read )
+            Allow user to read.
+
+       -s <perms=string> ( --permissions-string <perms=string> )
+            Give out the string value for permissions (e.g. rwxr-xr--).
+
+       -t ( --world-write )
+            Allow world to write.
+
+       -v <perms-numeric> ( --permissions-value <perms-numeric> )
+            Give out the numeric value for permissions (e.g. 757)
+
+       -w ( --user-write )
+            Allow user to write.
+
+       -x ( --user-exec )
+            Allow user to execute.
+     
+     This command takes options and free-form arguments.  If your arguments resemble option specifiers (i.e., they start with a - or --), you must use '
+     -- ' between the end of the command options and the beginning of the arguments.
+----

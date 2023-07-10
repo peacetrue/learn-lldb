@@ -1,0 +1,14 @@
+= reproducer-xcrash
+
+----
+Intentionally force  the debugger to crash in order to trigger and test reproducer generation.
+
+Syntax: reproducer xcrash <cmd-options>
+
+Command Options Usage:
+  reproducer xcrash -s <none>
+
+       -s <none> ( --signal <none> )
+            The signal to crash the debugger.
+            Values: SIGILL | SIGSEGV
+----

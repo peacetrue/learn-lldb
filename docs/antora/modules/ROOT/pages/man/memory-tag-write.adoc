@@ -1,0 +1,17 @@
+= memory-tag-write
+
+----
+Write memory tags starting from the granule that contains the given address.
+
+Syntax: memory tag write <cmd-options> <address-expression> <value> [<value> [...]]
+
+Command Options Usage:
+  memory tag write [-e <address-expression>] <address-expression> <value> [<value> [...]]
+
+       -e <address-expression> ( --end-addr <address-expression> )
+            Set tags for start address to end-addr, repeating tags as needed to cover the range. (instead of calculating the range from the number of
+            tags given)
+     
+     This command takes options and free-form arguments.  If your arguments resemble option specifiers (i.e., they start with a - or --), you must use '
+     -- ' between the end of the command options and the beginning of the arguments.
+----

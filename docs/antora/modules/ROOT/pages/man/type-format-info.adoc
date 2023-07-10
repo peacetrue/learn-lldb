@@ -1,0 +1,8 @@
+= type-format-info
+
+----
+This command evaluates the provided expression and shows which format is applied to the resulting value (if any).  Expects 'raw' input (see 'help
+raw-input'.)
+
+Syntax: type format info <expr>
+----

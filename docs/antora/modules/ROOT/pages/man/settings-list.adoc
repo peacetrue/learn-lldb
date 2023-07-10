@@ -1,0 +1,7 @@
+= settings-list
+
+----
+List and describe matching debugger settings.  Defaults to all listing all settings.
+
+Syntax: settings list [<setting-variable-name | setting-prefix>]
+----

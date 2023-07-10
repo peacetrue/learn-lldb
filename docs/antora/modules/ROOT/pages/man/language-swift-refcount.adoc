@@ -1,0 +1,7 @@
+= language-swift-refcount
+
+----
+Inspect the reference count data for a Swift object  Expects 'raw' input (see 'help raw-input'.)
+
+Syntax: language swift refcount
+----

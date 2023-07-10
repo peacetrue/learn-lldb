@@ -1,0 +1,7 @@
+= thread-continue
+
+----
+Continue execution of the current target process.  One or more threads may be specified, by default all threads continue.
+
+Syntax: thread continue <thread-index> [<thread-index> [...]]
+----

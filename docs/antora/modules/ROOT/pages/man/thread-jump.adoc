@@ -1,0 +1,27 @@
+= thread-jump
+
+----
+Sets the program counter to a new address.
+
+Syntax: thread jump
+
+Command Options Usage:
+  thread jump [-r] -l <linenum> [-f <filename>]
+  thread jump [-r] -b <offset>
+  thread jump [-r] -a <address-expression>
+
+       -a <address-expression> ( --address <address-expression> )
+            Jumps to a specific address.
+
+       -b <offset> ( --by <offset> )
+            Jumps by a relative line offset from the current line.
+
+       -f <filename> ( --file <filename> )
+            Specifies the source file to jump to.
+
+       -l <linenum> ( --line <linenum> )
+            Specifies the line number to jump to.
+
+       -r ( --force )
+            Allows the PC to leave the current function.
+----

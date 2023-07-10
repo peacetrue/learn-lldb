@@ -1,0 +1,13 @@
+= statistics-dump
+
+----
+Dump metrics in JSON format
+
+Syntax: statistics dump [<options>]
+
+Command Options Usage:
+  statistics dump [-a]
+
+       -a ( --all-targets )
+            Include statistics for all targets.
+----

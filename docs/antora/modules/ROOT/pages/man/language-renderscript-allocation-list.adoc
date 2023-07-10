@@ -1,0 +1,13 @@
+= language-renderscript-allocation-list
+
+----
+List renderscript allocations and their information.
+
+Syntax: renderscript allocation list
+
+Command Options Usage:
+  renderscript allocation list [-i <index>]
+
+       -i <index> ( --id <index> )
+            Only show details of a single allocation with specified id.
+----

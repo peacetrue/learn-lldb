@@ -1,0 +1,17 @@
+= log-timers
+
+----
+Enable, disable, dump, and reset LLDB internal performance timers.
+
+Syntax: log timers < enable <depth> | disable | dump | increment <bool> | reset >
+
+The following subcommands are supported:
+
+      disable   -- disable LLDB internal performance timers
+      dump      -- dump LLDB internal performance timers
+      enable    -- enable LLDB internal performance timers
+      increment -- increment LLDB internal performance timers
+      reset     -- reset LLDB internal performance timers
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

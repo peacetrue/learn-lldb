@@ -1,0 +1,15 @@
+= process-trace-save
+
+----
+Save the trace of the current process in the specified directory. The directory will be created if needed. This will also create a file
+<directory>/trace.json with the main properties of the trace session, along with others files which contain the actual trace data. The trace.json file
+can be used later as input for the "trace load" command to load the trace in LLDB
+
+Syntax: process trace save [<cmd-options>]
+
+Command Options Usage:
+  process trace save -d <value>
+
+       -d <value> ( --directory <value> )
+            The directory where the trace will be saved.It will be created if it does not exist.
+----

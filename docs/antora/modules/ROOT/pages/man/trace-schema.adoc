@@ -1,0 +1,17 @@
+= trace-schema
+
+----
+Show the schema of the given trace plugin.
+
+Syntax: trace schema <plug-in>. Use the plug-in name "all" to see all schemas.
+
+
+Command Options Usage:
+  trace schema [-v] <none>
+
+       -v ( --verbose )
+            Show verbose trace schema logging for debugging the plug-in.
+     
+     This command takes options and free-form arguments.  If your arguments resemble option specifiers (i.e., they start with a - or --), you must use '
+     -- ' between the end of the command options and the beginning of the arguments.
+----

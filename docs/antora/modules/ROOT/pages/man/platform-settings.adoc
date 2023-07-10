@@ -1,0 +1,13 @@
+= platform-settings
+
+----
+Set settings for the current target's platform, or for a platform by name.
+
+Syntax: platform settings
+
+Command Options Usage:
+  platform settings [-w <path>]
+
+       -w <path> ( --working-dir <path> )
+            The working directory for the platform.
+----

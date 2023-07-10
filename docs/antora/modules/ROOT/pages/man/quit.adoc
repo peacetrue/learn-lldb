@@ -1,0 +1,7 @@
+= quit
+
+----
+Quit the LLDB debugger.
+
+Syntax: quit [exit-code]
+----

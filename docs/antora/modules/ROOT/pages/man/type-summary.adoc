@@ -1,0 +1,18 @@
+= type-summary
+
+----
+Commands for editing variable summary display options.
+
+Syntax: type summary [<sub-command-options>] 
+
+The following subcommands are supported:
+
+      add    -- Add a new summary style for a type.
+      clear  -- Delete all existing summaries.
+      delete -- Delete an existing summary for a type.
+      info   -- This command evaluates the provided expression and shows which summary is applied to the resulting value (if any).  Expects 'raw' input
+                (see 'help raw-input'.)
+      list   -- Show a list of current summaries.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

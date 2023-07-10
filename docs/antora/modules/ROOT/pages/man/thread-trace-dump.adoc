@@ -1,0 +1,15 @@
+= thread-trace-dump
+
+----
+Commands for displaying trace information of the threads in the current process.
+
+Syntax: thread trace dump <subcommand> [<subcommand objects>]
+
+The following subcommands are supported:
+
+      info         -- Dump the traced information for one or more threads.  If no threads are specified, show the current thread. Use the thread-index
+                      "all" to see all threads.
+      instructions -- Dump the traced instructions for one thread. If no thread is specified, show the current thread.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

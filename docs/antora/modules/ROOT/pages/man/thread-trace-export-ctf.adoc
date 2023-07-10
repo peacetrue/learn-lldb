@@ -1,0 +1,16 @@
+= thread-trace-export-ctf
+
+----
+Export a given thread's trace to Chrome Trace Format
+
+Syntax: thread trace export ctf [<ctf-options>]
+
+Command Options Usage:
+  thread trace export ctf -f <filename> [-t <thread-index>]
+
+       -f <filename> ( --file <filename> )
+            Path of the file to export the trace data
+
+       -t <thread-index> ( --tid <thread-index> )
+            Export the trace for the specified thread index. Otherwise, the currently selected thread will be used.
+----

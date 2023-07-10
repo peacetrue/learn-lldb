@@ -1,0 +1,27 @@
+= process
+
+----
+Commands for interacting with processes on the current platform.
+
+Syntax: process <subcommand> [<subcommand-options>]
+
+The following subcommands are supported:
+
+      attach    -- Attach to a process.
+      connect   -- Connect to a remote debug service.
+      continue  -- Continue execution of all threads in the current process.
+      detach    -- Detach from the current target process.
+      handle    -- Manage LLDB handling of OS signals for the current target process.  Defaults to showing current policy.
+      interrupt -- Interrupt the current target process.
+      kill      -- Terminate the current target process.
+      launch    -- Launch the executable in the debugger.
+      load      -- Load a shared library into the current process.
+      plugin    -- Send a custom command to the current target process plug-in.
+      save-core -- Save the current process as a core file using an appropriate file type.
+      signal    -- Send a UNIX signal to the current target process.
+      status    -- Show status and stop location for the current target process.
+      trace     -- Commands for tracing the current process.
+      unload    -- Unload a shared library from the current process using the index returned by a previous call to "process load".
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

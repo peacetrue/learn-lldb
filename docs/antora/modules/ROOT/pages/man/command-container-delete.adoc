@@ -1,0 +1,7 @@
+= command-container-delete
+
+----
+Delete a container command previously added to lldb.
+
+Syntax: command container delete [[path1] ...] container-cmd
+----

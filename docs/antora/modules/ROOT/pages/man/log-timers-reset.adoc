@@ -1,0 +1,7 @@
+= log-timers-reset
+
+----
+reset LLDB internal performance timers
+
+Syntax: log timers reset
+----

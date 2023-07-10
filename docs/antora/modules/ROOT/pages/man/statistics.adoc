@@ -1,0 +1,15 @@
+= statistics
+
+----
+Print statistics about a debugging session
+
+Syntax: statistics <subcommand> [<subcommand-options>]
+
+The following subcommands are supported:
+
+      disable -- Disable statistics collection
+      dump    -- Dump metrics in JSON format
+      enable  -- Enable statistics collection
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

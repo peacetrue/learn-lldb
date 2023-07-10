@@ -1,0 +1,14 @@
+= language-renderscript-scriptgroup
+
+----
+Command set for interacting with scriptgroups.
+
+Syntax: renderscript scriptgroup
+
+The following subcommands are supported:
+
+      breakpoint -- Renderscript scriptgroup breakpoint interaction.
+      list       -- List all currently discovered script groups.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

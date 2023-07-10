@@ -1,0 +1,7 @@
+= platform-list
+
+----
+List all platforms that are available.
+
+Syntax: platform list
+----

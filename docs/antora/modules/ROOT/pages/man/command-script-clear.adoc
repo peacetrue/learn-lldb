@@ -1,0 +1,7 @@
+= command-script-clear
+
+----
+Delete all scripted commands.
+
+Syntax: command script clear
+----

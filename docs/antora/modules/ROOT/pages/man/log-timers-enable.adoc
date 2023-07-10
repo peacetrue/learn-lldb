@@ -1,0 +1,7 @@
+= log-timers-enable
+
+----
+enable LLDB internal performance timers
+
+Syntax: log timers enable <depth>
+----

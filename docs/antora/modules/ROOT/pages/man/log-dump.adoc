@@ -1,0 +1,16 @@
+= log-dump
+
+----
+dump circular buffer logs
+
+Syntax: log dump <cmd-options> <log-channel>
+
+Command Options Usage:
+  log dump [-f <filename>] <log-channel>
+
+       -f <filename> ( --file <filename> )
+            Set the destination file to dump to.
+     
+     This command takes options and free-form arguments.  If your arguments resemble option specifiers (i.e., they start with a - or --), you must use '
+     -- ' between the end of the command options and the beginning of the arguments.
+----

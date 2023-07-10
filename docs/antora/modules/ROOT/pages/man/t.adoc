@@ -1,0 +1,9 @@
+= t
+
+----
+Change the currently selected thread.
+
+Syntax: t <thread-index>
+
+'t' is an abbreviation for 'thread select'
+----

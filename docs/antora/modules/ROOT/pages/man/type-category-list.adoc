@@ -1,0 +1,7 @@
+= type-category-list
+
+----
+Provide a list of all existing categories.
+
+Syntax: type category list [<name>]
+----

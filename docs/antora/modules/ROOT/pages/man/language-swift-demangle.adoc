@@ -1,0 +1,13 @@
+= language-swift-demangle
+
+----
+Demangle a Swift mangled name
+
+Syntax: language swift demangle
+
+Command Options Usage:
+  demangle [-e]
+
+       -e ( --expand )
+            Whether LLDB should print the demangled tree
+----

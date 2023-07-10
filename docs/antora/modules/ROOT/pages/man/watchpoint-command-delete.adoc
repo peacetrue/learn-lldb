@@ -1,0 +1,7 @@
+= watchpoint-command-delete
+
+----
+Delete the set of commands from a watchpoint.
+
+Syntax: watchpoint command delete <watchpt-id>
+----

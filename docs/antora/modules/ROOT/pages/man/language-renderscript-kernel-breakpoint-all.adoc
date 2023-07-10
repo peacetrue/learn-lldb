@@ -1,0 +1,8 @@
+= language-renderscript-kernel-breakpoint-all
+
+----
+Automatically sets a breakpoint on all renderscript kernels that are or will be loaded.
+Disabling option means breakpoints will no longer be set on any kernels loaded in the future, but does not remove currently set breakpoints.
+
+Syntax: renderscript kernel breakpoint all <enable/disable>
+----

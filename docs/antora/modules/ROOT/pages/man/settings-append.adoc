@@ -1,0 +1,7 @@
+= settings-append
+
+----
+Append one or more values to a debugger array, dictionary, or string setting.  Expects 'raw' input (see 'help raw-input'.)
+
+Syntax: settings append <setting-variable-name> <value>
+----

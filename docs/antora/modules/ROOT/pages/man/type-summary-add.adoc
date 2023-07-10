@@ -1,0 +1,131 @@
+= type-summary-add
+
+----
+Add a new summary style for a type.
+
+Syntax: type summary add <cmd-options> <name> [<name> [...]]
+
+Command Options Usage:
+  type summary add -c [-Oprvx] [-C <boolean>] [-w <name>] <name> [<name> [...]]
+  type summary add [-ehprvx] -s <summary-string> [-C <boolean>] [-w <name>] [-n <name>] <name> [<name> [...]]
+  type summary add [-Pehprvx] [-C <boolean>] [-w <name>] [-n <name>] [-F <python-function>] [-o <python-script>] <name> [<name> [...]]
+
+       -C <boolean> ( --cascade <boolean> )
+            If true, cascade through typedef chains.
+
+       -F <python-function> ( --python-function <python-function> )
+            Give the name of a Python function to use for this type.
+
+       -O ( --omit-names )
+            If true, omit value names in the summary display.
+
+       -P ( --input-python )
+            Input Python code to use for this type manually.
+
+       -c ( --inline-children )
+            If true, inline all child values into summary string.
+
+       -e ( --expand )
+            Expand aggregate data types to show children on separate lines.
+
+       -h ( --hide-empty )
+            Do not expand aggregate data types with no children.
+
+       -n <name> ( --name <name> )
+            A name for this summary string.
+
+       -o <python-script> ( --python-script <python-script> )
+            Give a one-liner Python script as part of the command.
+
+       -p ( --skip-pointers )
+            Don't use this format for pointers-to-type objects.
+
+       -r ( --skip-references )
+            Don't use this format for references-to-type objects.
+
+       -s <summary-string> ( --summary-string <summary-string> )
+            Summary string used to display text and object contents.
+
+       -v ( --no-value )
+            Don't show the value, just show the summary, for this type.
+
+       -w <name> ( --category <name> )
+            Add this to the given category instead of the default one.
+
+       -x ( --regex )
+            Type names are actually regular expressions.
+
+The following examples of 'type summary add' refer to this code snippet for context:
+
+    struct JustADemo
+    {
+        int* ptr;
+        float value;
+        JustADemo(int p = 1, float v = 0.1) : ptr(new int(p)), value(v) {}
+    };
+    JustADemo demo_instance(42, 3.14);
+
+    typedef JustADemo NewDemo;
+    NewDemo new_demo_instance(42, 3.14);
+
+(lldb) type summary add --summary-string "the answer is ${*var.ptr}" JustADemo
+
+    Subsequently displaying demo_instance with 'frame variable' or 'expression' will display "the answer is 42"
+
+(lldb) type summary add --summary-string "the answer is ${*var.ptr}, and the question is ${var.value}" JustADemo
+
+    Subsequently displaying demo_instance with 'frame variable' or 'expression' will display "the answer is 42 and the question is 3.14"
+
+Alternatively, you could define formatting for all pointers to integers and rely on that when formatting JustADemo to obtain the same result:
+
+(lldb) type summary add --summary-string "${var%V} -> ${*var}" "int *"
+(lldb) type summary add --summary-string "the answer is ${var.ptr}, and the question is ${var.value}" JustADemo
+
+Type summaries are automatically applied to derived typedefs, so the examples above apply to both JustADemo and NewDemo.  The cascade option can be used
+to suppress this behavior:
+
+(lldb) type summary add --summary-string "${var.ptr}, ${var.value},{${var.byte}}" JustADemo -C no
+
+    The summary will now be used for values of JustADemo but not NewDemo.
+
+By default summaries are shown for pointers and references to values of the specified type.  To suppress formatting for pointers use the -p option, or
+apply the corresponding -r option to suppress formatting for references:
+
+(lldb) type summary add -p -r --summary-string "${var.ptr}, ${var.value},{${var.byte}}" JustADemo
+
+One-line summaries including all fields in a type can be inferred without supplying an explicit summary string by passing the -c option:
+
+(lldb) type summary add -c JustADemo
+(lldb) frame variable demo_instance
+(ptr=<address>, value=3.14)
+
+Type summaries normally suppress the nested display of individual fields.  To supply a summary to supplement the default structure add the -e option:
+
+(lldb) type summary add -e --summary-string "*ptr = ${*var.ptr}" JustADemo
+
+Now when displaying JustADemo values the int* is displayed, followed by the standard LLDB sequence of children, one per line:
+
+*ptr = 42 {
+  ptr = <address>
+  value = 3.14
+}
+
+You can also add summaries written in Python.  These scripts use lldb public API to gather information from your variables and produce a meaningful
+summary.  To start a multi-line script use the -P option.  The function declaration will be displayed along with a comment describing the two arguments.
+End your script with the  word 'DONE' on a line by itself:
+
+(lldb) type summary add JustADemo -P
+def function (valobj,internal_dict):
+"""valobj: an SBValue which you want to provide a summary for
+internal_dict: an LLDB support object not to be used"""
+    value = valobj.GetChildMemberWithName('value');
+    return 'My value is ' + value.GetValue();
+    DONE
+
+Alternatively, the -o option can be used when providing a simple one-line Python script:
+
+(lldb) type summary add JustADemo -o "value = valobj.GetChildMemberWithName('value'); return 'My value is ' + value.GetValue();"
+     
+     This command takes options and free-form arguments.  If your arguments resemble option specifiers (i.e., they start with a - or --), you must use '
+     -- ' between the end of the command options and the beginning of the arguments.
+----

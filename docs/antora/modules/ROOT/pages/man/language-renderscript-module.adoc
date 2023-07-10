@@ -1,0 +1,13 @@
+= language-renderscript-module
+
+----
+Commands that deal with RenderScript modules.
+
+Syntax: renderscript module
+
+The following subcommands are supported:
+
+      dump -- Dumps renderscript specific information for all modules.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

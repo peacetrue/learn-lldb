@@ -1,0 +1,7 @@
+= watchpoint-disable
+
+----
+Disable the specified watchpoint(s) without removing it/them.  If no watchpoints are specified, disable them all.
+
+Syntax: watchpoint disable [<watchpt-id | watchpt-id-list>]
+----

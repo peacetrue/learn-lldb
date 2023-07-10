@@ -1,0 +1,8 @@
+= session-save
+
+----
+Save the current session transcripts to a file.
+If no file if specified, transcripts will be saved to a temporary file.
+
+Syntax: session save [file]
+----

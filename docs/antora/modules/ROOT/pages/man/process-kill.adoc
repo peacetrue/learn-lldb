@@ -1,0 +1,7 @@
+= process-kill
+
+----
+Terminate the current target process.
+
+Syntax: process kill
+----

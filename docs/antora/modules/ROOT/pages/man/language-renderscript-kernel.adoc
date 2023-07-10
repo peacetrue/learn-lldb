@@ -1,0 +1,15 @@
+= language-renderscript-kernel
+
+----
+Commands that deal with RenderScript kernels.
+
+Syntax: renderscript kernel
+
+The following subcommands are supported:
+
+      breakpoint -- Commands that generate breakpoints on renderscript kernels.
+      coordinate -- Shows the (x,y,z) coordinate of the current kernel invocation.
+      list       -- Lists renderscript kernel names and associated script resources.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

@@ -1,0 +1,13 @@
+= language-renderscript-context
+
+----
+Commands that deal with RenderScript contexts.
+
+Syntax: renderscript context
+
+The following subcommands are supported:
+
+      dump -- Dumps renderscript context information.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

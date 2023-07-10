@@ -1,0 +1,23 @@
+= target
+
+----
+Commands for operating on debugger targets.
+
+Syntax: target <subcommand> [<subcommand-options>]
+
+The following subcommands are supported:
+
+      create                  -- Create a target using the argument as the main executable.
+      delete                  -- Delete one or more targets by target index.
+      dump                    -- Commands for dumping information about the target.
+      list                    -- List all current targets in the current debug session.
+      modules                 -- Commands for accessing information for one or more target modules.
+      select                  -- Select a target as the current target by target index.
+      show-launch-environment -- Shows the environment being passed to the process when launched, taking info account 3 settings: target.env-vars,
+                                 target.inherit-env and target.unset-env-vars.
+      stop-hook               -- Commands for operating on debugger target stop-hooks.
+      symbols                 -- Commands for adding and managing debug symbol files.
+      variable                -- Read global variables for the current target, before or while running a process.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

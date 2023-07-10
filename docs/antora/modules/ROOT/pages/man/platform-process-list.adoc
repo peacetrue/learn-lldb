@@ -1,0 +1,60 @@
+= platform-process-list
+
+----
+List processes on a remote platform by name, pid, or many other matching attributes.
+
+Syntax: platform process list
+
+Command Options Usage:
+  platform process list [-Avx] [-p <pid>]
+  platform process list [-Avx] -n <process-name> [-a <arch>] [-G <unsigned-integer>] [-U <unsigned-integer>] [-g <unsigned-integer>] [-P <pid>] [-u <unsigned-integer>]
+  platform process list [-Avx] -e <process-name> [-a <arch>] [-G <unsigned-integer>] [-U <unsigned-integer>] [-g <unsigned-integer>] [-P <pid>] [-u <unsigned-integer>]
+  platform process list [-Avx] -s <process-name> [-a <arch>] [-G <unsigned-integer>] [-U <unsigned-integer>] [-g <unsigned-integer>] [-P <pid>] [-u <unsigned-integer>]
+  platform process list [-Avx] -c <process-name> [-a <arch>] [-G <unsigned-integer>] [-U <unsigned-integer>] [-g <unsigned-integer>] [-P <pid>] [-u <unsigned-integer>]
+  platform process list [-Avx] -r <regular-expression> [-a <arch>] [-G <unsigned-integer>] [-U <unsigned-integer>] [-g <unsigned-integer>] [-P <pid>] [-u <unsigned-integer>]
+
+       -A ( --show-args )
+            Show process arguments instead of the process executable basename.
+
+       -G <unsigned-integer> ( --egid <unsigned-integer> )
+            [POSIX] Find processes that have a matching effective group ID.
+
+       -P <pid> ( --parent <pid> )
+            Find processes that have a matching parent process ID.
+
+       -U <unsigned-integer> ( --euid <unsigned-integer> )
+            [POSIX] Find processes that have a matching effective user ID.
+
+       -a <arch> ( --arch <arch> )
+            Find processes that have a matching architecture.
+
+       -c <process-name> ( --contains <process-name> )
+            Find processes with executable basenames that contain a string.
+
+       -e <process-name> ( --ends-with <process-name> )
+            Find processes with executable basenames that end with a string.
+
+       -g <unsigned-integer> ( --gid <unsigned-integer> )
+            [POSIX] Find processes that have a matching group ID.
+
+       -n <process-name> ( --name <process-name> )
+            Find processes with executable basenames that match a string.
+
+       -p <pid> ( --pid <pid> )
+            List the process info for a specific process ID.
+
+       -r <regular-expression> ( --regex <regular-expression> )
+            Find processes with executable basenames that match a regular expression.
+
+       -s <process-name> ( --starts-with <process-name> )
+            Find processes with executable basenames that start with a string.
+
+       -u <unsigned-integer> ( --uid <unsigned-integer> )
+            [POSIX] Find processes that have a matching user ID.
+
+       -v ( --verbose )
+            Enable verbose output.
+
+       -x ( --all-users )
+            Show processes matching all user IDs.
+----

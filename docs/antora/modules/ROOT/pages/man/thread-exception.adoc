@@ -1,0 +1,7 @@
+= thread-exception
+
+----
+Display the current exception object for a thread. Defaults to the current thread.
+
+Syntax: thread exception
+----

@@ -1,0 +1,10 @@
+= down
+
+----
+Select a newer stack frame.  Defaults to moving one frame, a numeric argument can specify an arbitrary number.  Expects 'raw' input (see 'help
+raw-input'.)
+
+Syntax: _regexp-down [<count>]
+
+'down' is an abbreviation for '_regexp-down'
+----

@@ -1,0 +1,7 @@
+= plugin-load
+
+----
+Import a dylib that implements an LLDB plugin.
+
+Syntax: plugin load <filename>
+----

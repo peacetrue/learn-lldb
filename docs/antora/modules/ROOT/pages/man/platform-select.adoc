@@ -1,0 +1,22 @@
+= platform-select
+
+----
+Create a platform if needed and select it as the current platform.
+
+Syntax: platform select <platform-name>
+
+Command Options Usage:
+  platform select [-v <none>] [-b <none>] [-S <filename>] <platform-name>
+
+       -S <filename> ( --sysroot <filename> )
+            Specify the SDK root directory that contains a root of all remote system files.
+
+       -b <none> ( --build <none> )
+            Specify the initial SDK build number.
+
+       -v <none> ( --version <none> )
+            Specify the initial SDK version to use prior to connecting.
+     
+     This command takes options and free-form arguments.  If your arguments resemble option specifiers (i.e., they start with a - or --), you must use '
+     -- ' between the end of the command options and the beginning of the arguments.
+----

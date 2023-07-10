@@ -1,0 +1,10 @@
+= bt
+
+----
+Show the current thread's call stack.  Any numeric argument displays at most that many frames.  The argument 'all' displays all threads.  Expects 'raw'
+input (see 'help raw-input'.)
+
+Syntax: bt [<digit> | all]
+
+'bt' is an abbreviation for '_regexp-bt'
+----

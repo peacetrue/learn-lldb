@@ -1,0 +1,7 @@
+= language-renderscript-allocation-load
+
+----
+Loads renderscript allocation contents from a file.
+
+Syntax: renderscript allocation load <ID> <filename>
+----

@@ -1,0 +1,7 @@
+= log-disable
+
+----
+Disable one or more log channel categories.
+
+Syntax: log disable <log-channel> <log-category> [<log-category> [...]]
+----

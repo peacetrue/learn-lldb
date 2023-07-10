@@ -1,0 +1,9 @@
+= shell
+
+----
+Run a shell command on the host.  Expects 'raw' input (see 'help raw-input'.)
+
+Syntax: shell <shell-command>
+  shell [<none> [<none> [...]]]
+'shell' is an abbreviation for 'platform shell -h   --'
+----

@@ -1,0 +1,8 @@
+= reproducer-generate
+
+----
+Generate reproducer on disk. When the debugger is in capture mode, this command will output the reproducer to a directory on disk and quit. In replay
+mode this command in a no-op.
+
+Syntax: reproducer generate
+----

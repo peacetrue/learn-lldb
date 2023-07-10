@@ -1,0 +1,7 @@
+= command-unalias
+
+----
+Delete one or more custom commands defined by 'command alias'.
+
+Syntax: command unalias <alias-name>
+----

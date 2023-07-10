@@ -1,0 +1,10 @@
+= parray
+
+----
+parray <COUNT> <EXPRESSION> -- lldb will evaluate EXPRESSION to get a typed-pointer-to-an-array in memory, and will display COUNT elements of that type
+from the array.  Expects 'raw' input (see 'help raw-input'.)
+
+Syntax: parray <expr>
+  parray <expr>
+'parray' is an abbreviation for 'expression -Z %1   --'
+----

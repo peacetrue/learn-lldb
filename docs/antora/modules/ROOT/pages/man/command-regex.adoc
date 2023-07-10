@@ -1,0 +1,38 @@
+= command-regex
+
+----
+Define a custom command in terms of existing commands by matching regular expressions.
+
+Syntax: command regex <cmd-name> [s/<regex>/<subst>/ ...]
+
+Command Options Usage:
+  command regex [-h <none>] [-s <none>] [<substitution-pair>]
+
+       -h <none> ( --help <none> )
+            The help text to display for this command.
+
+       -s <none> ( --syntax <none> )
+            A syntax string showing the typical usage syntax.
+
+This command allows the user to create powerful regular expression commands with substitutions. The regular expressions and substitutions are specified
+using the regular expression substitution format of:
+
+    s/<regex>/<subst>/
+
+<regex> is a regular expression that can use parenthesis to capture regular expression input and substitute the captured matches in the output using %1
+for the first match, %2 for the second, and so on.
+
+The regular expressions can all be specified on the command line if more than one argument is provided. If just the command name is provided on the
+command line, then the regular expressions and substitutions can be entered on separate lines, followed by an empty line to terminate the command
+definition.
+
+EXAMPLES
+
+The following example will define a regular expression command named 'f' that will call 'finish' if there are no arguments, or 'frame select
+<frame-idx>' if a number follows 'f':
+
+    (lldb) command regex f s/^$/finish/ 's/([0-9]+)/frame select %1/'
+     
+     This command takes options and free-form arguments.  If your arguments resemble option specifiers (i.e., they start with a - or --), you must use '
+     -- ' between the end of the command options and the beginning of the arguments.
+----

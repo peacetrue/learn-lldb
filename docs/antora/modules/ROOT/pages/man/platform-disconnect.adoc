@@ -1,0 +1,7 @@
+= platform-disconnect
+
+----
+Disconnect from the current platform.
+
+Syntax: platform disconnect
+----

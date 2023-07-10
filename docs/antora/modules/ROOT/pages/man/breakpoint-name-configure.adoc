@@ -1,0 +1,62 @@
+= breakpoint-name-configure
+
+----
+Configure the options for the breakpoint name provided.  If you provide a breakpoint id, the options will be copied from the breakpoint, otherwise only
+the options specified will be set on the name.
+
+Syntax: breakpoint name configure <command-options> <breakpoint-name-list>
+
+Command Options Usage:
+  configure [-de] [-G <boolean>] [-C <command>] [-c <expr>] [-i <count>] [-o <boolean>] [-q <queue-name>] [-t <thread-id>] [-x <thread-index>] [-T <thread-name>] [-D <boolean>] [-A <boolean>] [-L <boolean>] [-B <breakpt-id>] [-H <none>] [<breakpoint-name>]
+
+       -A <boolean> ( --allow-disable <boolean> )
+            Determines whether the breakpoint can be disabled by name or when all breakpoints are disabled.
+
+       -B <breakpt-id> ( --breakpoint-id <breakpt-id> )
+            Specify a breakpoint ID to use.
+
+       -C <command> ( --command <command> )
+            A command to run when the breakpoint is hit, can be provided more than once, the commands will get run in order left to right.
+
+       -D <boolean> ( --allow-delete <boolean> )
+            Determines whether the breakpoint can be deleted by name or when all breakpoints are deleted.
+
+       -G <boolean> ( --auto-continue <boolean> )
+            The breakpoint will auto-continue after running its commands.
+
+       -H <none> ( --help-string <none> )
+            A help string describing the purpose of this name.
+
+       -L <boolean> ( --allow-list <boolean> )
+            Determines whether the breakpoint will show up in break list if not referred to explicitly.
+
+       -T <thread-name> ( --thread-name <thread-name> )
+            The breakpoint stops only for the thread whose thread name matches this argument.
+
+       -c <expr> ( --condition <expr> )
+            The breakpoint stops only if this condition expression evaluates to true.
+
+       -d ( --disable )
+            Disable the breakpoint.
+
+       -e ( --enable )
+            Enable the breakpoint.
+
+       -i <count> ( --ignore-count <count> )
+            Set the number of times this breakpoint is skipped before stopping.
+
+       -o <boolean> ( --one-shot <boolean> )
+            The breakpoint is deleted the first time it stop causes a stop.
+
+       -q <queue-name> ( --queue-name <queue-name> )
+            The breakpoint stops only for threads in the queue whose name is given by this argument.
+
+       -t <thread-id> ( --thread-id <thread-id> )
+            The breakpoint stops only for the thread whose TID matches this argument.  The token 'current' resolves to the current thread's ID.
+
+       -x <thread-index> ( --thread-index <thread-index> )
+            The breakpoint stops only for the thread whose index matches this argument.
+     
+     This command takes options and free-form arguments.  If your arguments resemble option specifiers (i.e., they start with a - or --), you must use '
+     -- ' between the end of the command options and the beginning of the arguments.
+----

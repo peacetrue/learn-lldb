@@ -1,0 +1,7 @@
+= language-cplusplus-demangle
+
+----
+Demangle a C++ mangled name.
+
+Syntax: language cplusplus demangle
+----

@@ -1,0 +1,7 @@
+= target-modules-dump-symfile
+
+----
+Dump the debug symbol file for one or more target modules.
+
+Syntax: target modules dump symfile [<filename> [<filename> [...]]]
+----

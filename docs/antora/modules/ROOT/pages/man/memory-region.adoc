@@ -1,0 +1,7 @@
+= memory-region
+
+----
+Get information on the memory region containing an address in the current target process.
+
+Syntax: memory region ADDR
+----

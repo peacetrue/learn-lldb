@@ -1,0 +1,39 @@
+= settings-set
+
+----
+Set the value of the specified debugger setting.  Expects 'raw' input (see 'help raw-input'.)
+
+Syntax: settings set <cmd-options> -- <setting-variable-name> <value>
+
+Command Options Usage:
+  settings set [-efg] -- <setting-variable-name> <value>
+  settings set <setting-variable-name> <value>
+
+       -e ( --exists )
+            Set the setting if it exists, but do not cause the command to raise an error if it does not exist.
+
+       -f ( --force )
+            Force an empty value to be accepted as the default.
+
+       -g ( --global )
+            Apply the new value to the global default value.
+
+When setting a dictionary or array variable, you can set multiple entries at once by giving the values to the set command.  For example:
+
+(lldb) settings set target.run-args value1 value2 value3
+(lldb) settings set target.env-vars MYPATH=~/.:/usr/bin  SOME_ENV_VAR=12345
+
+(lldb) settings show target.run-args
+  [0]: 'value1'
+  [1]: 'value2'
+  [3]: 'value3'
+(lldb) settings show target.env-vars
+  'MYPATH=~/.:/usr/bin'
+  'SOME_ENV_VAR=12345'
+
+Warning:  The 'set' command re-sets the entire array or dictionary.  If you just want to add, remove or update individual values (or add something to
+the end), use one of the other settings sub-commands: append, replace, insert-before or insert-after.
+     
+     This command takes options and free-form arguments.  If your arguments resemble option specifiers (i.e., they start with a - or --), you must use '
+     -- ' between the end of the command options and the beginning of the arguments.
+----

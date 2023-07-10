@@ -1,0 +1,13 @@
+= settings-read
+
+----
+Read settings previously saved to a file with "settings write".
+
+Syntax: settings read <cmd-options>
+
+Command Options Usage:
+  settings read -f <filename>
+
+       -f <filename> ( --file <filename> )
+            The file from which to read the settings.
+----

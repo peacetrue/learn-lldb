@@ -1,0 +1,25 @@
+= type-lookup
+
+----
+Lookup types and declarations in the current target, following language-specific naming conventions.  Expects 'raw' input (see 'help raw-input'.)
+
+Syntax: type lookup <type-specifier>
+
+Command Options Usage:
+  type lookup [-h] [-l <source-language>]
+
+       -h ( --show-help )
+            Display available help for types
+
+       -l <source-language> ( --language <source-language> )
+            Which language's types should the search scope be
+
+For Swift, in addition to a simple type name (such as String, Int, NSObject, ..), one can also provide:
+- a mangled type name (e.g. $sSiD)
+- the name of a function, even if multiple overloads of it exist
+- the name of an operator
+- the name of a module available in the current target, which will print all types and declarations available in that module
+     
+     Important Note: Because this command takes 'raw' input, if you use any command options you must use ' -- ' between the end of the command options
+     and the beginning of the raw input.
+----

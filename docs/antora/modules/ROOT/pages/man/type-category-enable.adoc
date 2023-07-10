@@ -1,0 +1,16 @@
+= type-category-enable
+
+----
+Enable a category as a source of formatters.
+
+Syntax: type category enable <cmd-options> <name> [<name> [...]]
+
+Command Options Usage:
+  type category enable [-l <source-language>] <name> [<name> [...]]
+
+       -l <source-language> ( --language <source-language> )
+            Enable the category for this language.
+     
+     This command takes options and free-form arguments.  If your arguments resemble option specifiers (i.e., they start with a - or --), you must use '
+     -- ' between the end of the command options and the beginning of the arguments.
+----

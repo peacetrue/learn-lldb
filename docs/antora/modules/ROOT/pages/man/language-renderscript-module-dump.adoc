@@ -1,0 +1,7 @@
+= language-renderscript-module-dump
+
+----
+Dumps renderscript specific information for all modules.
+
+Syntax: renderscript module dump
+----

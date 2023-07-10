@@ -88,7 +88,7 @@ $(BUILD)/target.source: $(BUILD)/empty.bin $(BUILD)/basic_flow.bin
 target.case: $(BUILD)/target.source
 	lldb -b -S $(word 1,$^)
 
-# 生成文档
+# 将 man 手册生成 adoc 文档
 adoc.case: script/adoc.py
 	lldb -b -O "command script import $<"
-
+	cd ../../docs/antora && antora generate playbook.yml

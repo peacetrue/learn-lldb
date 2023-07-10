@@ -1,0 +1,18 @@
+= thread-trace
+
+----
+Commands for operating on traces of the threads in the current process.
+
+Syntax: thread trace <subcommand> [<subcommand objects>]
+
+The following subcommands are supported:
+
+      dump   -- Commands for displaying trace information of the threads in the current process.
+      export -- Commands for exporting traces of the threads in the current process to different formats.
+      start  -- Start tracing threads with the corresponding trace plug-in for the current process.
+      stop   -- Stop tracing threads, including the ones traced with the "process trace start" command.Defaults to the current thread. Thread indices
+                can be specified as arguments.
+                Use the thread-index "all" to stop tracing for all existing threads.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

@@ -1,0 +1,16 @@
+= breakpoint-name-delete
+
+----
+Delete a name from the breakpoints provided.
+
+Syntax: breakpoint name delete <command-options> <breakpoint-id-list>
+
+Command Options Usage:
+  delete [-N <breakpoint-name>] [<breakpt-id>]
+
+       -N <breakpoint-name> ( --name <breakpoint-name> )
+            Specifies a breakpoint name to use.
+     
+     This command takes options and free-form arguments.  If your arguments resemble option specifiers (i.e., they start with a - or --), you must use '
+     -- ' between the end of the command options and the beginning of the arguments.
+----

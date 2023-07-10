@@ -1,0 +1,7 @@
+= thread-plan-discard
+
+----
+Discards thread plans up to and including the specified index (see 'thread plan list'.)  Only user visible plans can be discarded.
+
+Syntax: thread plan discard <unsigned-integer>
+----

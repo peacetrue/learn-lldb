@@ -1,0 +1,7 @@
+= thread-list
+
+----
+Show a summary of each thread in the current target process.  Use 'settings set thread-format' to customize the individual thread listings.
+
+Syntax: thread list
+----

@@ -1,0 +1,7 @@
+= settings-show
+
+----
+Show matching debugger settings and their current values.  Defaults to showing all settings.
+
+Syntax: settings show [<setting-variable-name>]
+----

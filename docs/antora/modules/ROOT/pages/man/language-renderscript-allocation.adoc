@@ -1,0 +1,17 @@
+= language-renderscript-allocation
+
+----
+Commands that deal with RenderScript allocations.
+
+Syntax: renderscript allocation
+
+The following subcommands are supported:
+
+      dump    -- Displays the contents of a particular allocation
+      list    -- List renderscript allocations and their information.
+      load    -- Loads renderscript allocation contents from a file.
+      refresh -- Recomputes the details of all allocations.
+      save    -- Write renderscript allocation contents to a file.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

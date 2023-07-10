@@ -1,0 +1,16 @@
+= platform-file
+
+----
+Commands to access files on the current platform.
+
+Syntax: platform file [open|close|read|write] ...
+
+The following subcommands are supported:
+
+      close -- Close a file on the remote end.
+      open  -- Open a file on the remote end.
+      read  -- Read data from a file on the remote end.
+      write -- Write data to a file on the remote end.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

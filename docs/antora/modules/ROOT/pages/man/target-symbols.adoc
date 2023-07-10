@@ -1,0 +1,14 @@
+= target-symbols
+
+----
+Commands for adding and managing debug symbol files.
+
+Syntax: target symbols <sub-command> ...
+
+The following subcommands are supported:
+
+      add -- Add a debug symbol file to one of the target's current modules by specifying a path to a debug symbols file or by using the options to
+             specify a module.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

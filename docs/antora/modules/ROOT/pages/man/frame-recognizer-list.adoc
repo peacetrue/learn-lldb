@@ -1,0 +1,7 @@
+= frame-recognizer-list
+
+----
+Show a list of active frame recognizers.
+
+Syntax: frame recognizer list
+----

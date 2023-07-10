@@ -1,0 +1,15 @@
+= list
+
+----
+List relevant source code using one of several shorthand formats.  Expects 'raw' input (see 'help raw-input'.)
+
+Syntax: 
+_regexp-list <file>:<line>   // List around specific file/line
+_regexp-list <line>          // List current file around specified line
+_regexp-list <function-name> // List specified function
+_regexp-list 0x<address>     // List around specified address
+_regexp-list -[<count>]      // List previous <count> lines
+_regexp-list                 // List subsequent lines
+
+'list' is an abbreviation for '_regexp-list'
+----

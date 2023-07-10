@@ -1,0 +1,16 @@
+= platform-process
+
+----
+Commands to query, launch and attach to processes on the current platform.
+
+Syntax: platform process [attach|launch|list] ...
+
+The following subcommands are supported:
+
+      attach -- Attach to a process.
+      info   -- Get detailed information for one or more process by process ID.
+      launch -- Launch a new process on a remote platform.
+      list   -- List processes on a remote platform by name, pid, or many other matching attributes.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

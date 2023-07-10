@@ -1,0 +1,17 @@
+= type-category
+
+----
+Commands for operating on type categories.
+
+Syntax: type category [<sub-command-options>] 
+
+The following subcommands are supported:
+
+      define  -- Define a new category as a source of formatters.
+      delete  -- Delete a category and all associated formatters.
+      disable -- Disable a category as a source of formatters.
+      enable  -- Enable a category as a source of formatters.
+      list    -- Provide a list of all existing categories.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

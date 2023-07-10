@@ -1,0 +1,33 @@
+= source-info
+
+----
+Display source line information for the current target process.  Defaults to instruction pointer in current stack frame.
+
+Syntax: source info <cmd-options>
+
+Command Options Usage:
+  source info [-c <count>] [-e <linenum>] [-f <filename>] [-l <linenum>] [-s <shlib-name>]
+  source info [-c <count>] [-n <symbol>] [-s <shlib-name>]
+  source info [-a <address-expression>] [-c <count>]
+
+       -a <address-expression> ( --address <address-expression> )
+            Lookup the address and display the source information for the corresponding file and line.
+
+       -c <count> ( --count <count> )
+            The number of line entries to display.
+
+       -e <linenum> ( --end-line <linenum> )
+            The line number at which to stop displaying lines.
+
+       -f <filename> ( --file <filename> )
+            The file from which to display source.
+
+       -l <linenum> ( --line <linenum> )
+            The line number at which to start the displaying lines.
+
+       -n <symbol> ( --name <symbol> )
+            The name of a function whose source to display.
+
+       -s <shlib-name> ( --shlib <shlib-name> )
+            Look up the source in the given module or shared library (can be specified more than once).
+----

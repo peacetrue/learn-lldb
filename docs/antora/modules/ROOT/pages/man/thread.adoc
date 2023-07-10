@@ -1,0 +1,40 @@
+= thread
+
+----
+Commands for operating on one or more threads in the current process.
+
+Syntax: thread <subcommand> [<subcommand-options>]
+
+The following subcommands are supported:
+
+      backtrace      -- Show thread call stacks.  Defaults to the current thread, thread indexes can be specified as arguments.
+                        Use the thread-index "all" to see all threads.
+                        Use the thread-index "unique" to see threads grouped by unique call stacks.
+                        Use 'settings set frame-format' to customize the printing of frames in the backtrace and 'settings set thread-format' to
+                        customize the thread header.
+      continue       -- Continue execution of the current target process.  One or more threads may be specified, by default all threads continue.
+      exception      -- Display the current exception object for a thread. Defaults to the current thread.
+      info           -- Show an extended summary of one or more threads.  Defaults to the current thread.
+      jump           -- Sets the program counter to a new address.
+      list           -- Show a summary of each thread in the current target process.  Use 'settings set thread-format' to customize the individual
+                        thread listings.
+      plan           -- Commands for managing thread plans that control execution.
+      return         -- Prematurely return from a stack frame, short-circuiting execution of newer frames and optionally yielding a specified value. 
+                        Defaults to the exiting the current stack frame.  Expects 'raw' input (see 'help raw-input'.)
+      select         -- Change the currently selected thread.
+      siginfo        -- Display the current siginfo object for a thread. Defaults to the current thread.
+      step-in        -- Source level single step, stepping into calls.  Defaults to current thread unless specified.
+      step-inst      -- Instruction level single step, stepping into calls.  Defaults to current thread unless specified.
+      step-inst-over -- Instruction level single step, stepping over calls.  Defaults to current thread unless specified.
+      step-out       -- Finish executing the current stack frame and stop after returning.  Defaults to current thread unless specified.
+      step-over      -- Source level single step, stepping over calls.  Defaults to current thread unless specified.
+      step-scripted  -- Step as instructed by the script class passed in the -C option.  You can also specify a dictionary of key (-k) and value (-v)
+                        pairs that will be used to populate an SBStructuredData Dictionary, which will be passed to the constructor of the class
+                        implementing the scripted step.  See the Python Reference for more details.
+      trace          -- Commands for operating on traces of the threads in the current process.
+      until          -- Continue until a line number or address is reached by the current or specified thread.  Stops when returning from the current
+                        function as a safety measure.  The target line number(s) are given as arguments, and if more than one is provided, stepping will
+                        stop when the first one is hit.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

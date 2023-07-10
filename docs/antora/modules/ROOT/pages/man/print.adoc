@@ -1,0 +1,9 @@
+= print
+
+----
+Evaluate an expression on the current thread.  Displays any returned value with LLDB's default formatting.  Expects 'raw' input (see 'help raw-input'.)
+
+Syntax: print <expr>
+  print <expr>
+'print' is an abbreviation for 'expression --'
+----

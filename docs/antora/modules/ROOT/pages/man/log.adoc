@@ -1,0 +1,17 @@
+= log
+
+----
+Commands controlling LLDB internal logging.
+
+Syntax: log <subcommand> [<command-options>]
+
+The following subcommands are supported:
+
+      disable -- Disable one or more log channel categories.
+      dump    -- dump circular buffer logs
+      enable  -- Enable logging for a single log channel.
+      list    -- List the log categories for one or more log channels.  If none specified, lists them all.
+      timers  -- Enable, disable, dump, and reset LLDB internal performance timers.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

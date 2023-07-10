@@ -1,0 +1,7 @@
+= memory-history
+
+----
+Print recorded stack traces for allocation/deallocation events associated with an address.
+
+Syntax: memory history <address>
+----

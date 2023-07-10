@@ -1,0 +1,14 @@
+= target-dump
+
+----
+Commands for dumping information about the target.
+
+Syntax: target dump [typesystem]
+
+The following subcommands are supported:
+
+      typesystem -- Dump the state of the target's internal type system.
+                    Intended to be used for debugging LLDB itself.
+
+For more help on any particular subcommand, type 'help <command> <subcommand>'.
+----

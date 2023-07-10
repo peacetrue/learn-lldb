@@ -1,0 +1,9 @@
+= r
+
+----
+Launch the executable in the debugger.
+
+Syntax: r [<run-args>]
+  r [<run-args>]
+'r' is an abbreviation for 'process launch -X true --'
+----
