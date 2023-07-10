@@ -10,6 +10,8 @@ $(BUILD)/%.bin: c/%.c $(BUILD)
 	gcc $(CFLAGS) -o $@ $<
 $(BUILD)/%.bin: cpp/%.cpp $(BUILD)
 	gcc $(CFLAGS) -o $@ $<
+$(BUILD)/%.bin: $(BUILD)/%.s $(BUILD)
+	gcc $(CFLAGS) -o $@ $<
 
 # 在 lldb 命令行打印信息
 lldb_echo=shell echo 'lldb: $(1)'
@@ -21,15 +23,9 @@ init/%:
 	echo "$(call lldb_echo,~/.lldbinit-$*)" > ~/.lldbinit-$*
 #命令行特定
 init-cmd: init/lldb init-global;
-init-local: init-global
-	echo "settings set target.load-cwd-lldbinit true" >> ~/.lldbinit
+init-local: init-cmd
+	echo "settings set target.load-cwd-lldbinit true" >> ~/.lldbinit-lldb
 	echo "$(call lldb_echo,./.lldbinit)" > ./.lldbinit
-init/%: init-local
-	echo "$(call lldb_echo,./.lldbinit-$*)" > ~/.lldbinit-$*
-init/view:
-	 cat ~/.lldbinit
-	 cat ~/.lldbinit-lldb
-	 cat ./.lldbinit
 clean/init:
 	rm -rf ~/.lldbinit
 	rm -rf ~/.lldbinit-lldb
@@ -38,25 +34,27 @@ clean/init:
 $(BUILD)/%.source: $(BUILD)
 	echo "$(call lldb_echo,$*)" > $@
 
-
+# 执行 lldb
 lldb:
 	lldb $(LFLAGS)
 lldb/%: $(BUILD)/%.bin
-	lldb $(LFLAGS) $<
+	lldb $(LFLAGS) -- $<
 
-# 直接运行 lldb
+# 调试汇编代码
+$(BUILD)/%.asm.s: c/%.c
+	cc -S -o $@ $<
+asm.case: lldb/empty.asm;
+
+# 初始化相关案例
 ## 清除配置文件
-none.case: clean/init lldb;
+init.none.case: clean/init lldb;
 ## 禁止使用配置文件
-none.option.case:
+init.none.option.case:
 	make lldb LFLAGS=--no-lldbinit
 init.global.case: init-global lldb;
 # 命令行优先级高于全局默认，会顶替掉全局默认，注意不是内容覆盖
 init.cmd.case: clean/init init-cmd lldb;
 init.local.case: init-local lldb;
-# 用于指示 LLDB 启动一个 REPL（Read-qEval-Print Loop）环境。与普通模式相比，允许您直接在调试器中执行代码片段
-repl.case:
-	make init.global.case LFLAGS=-r
 
 # 初始化时创建变量，后续打印变量。make 传递参数十分诡异
 init-expr: clean/init init-global
@@ -77,7 +75,11 @@ lflags+= -o \"$(call lldb_echo,--one-line-after-file)\"
 lifecycle.case: $(BUILD)/source-before-file.source $(BUILD)/source-after-file.source
 	make init-local lldb/empty LFLAGS="$(lflags) -S $(word 1,$^) -s $(word 2,$^)"
 
-# 演示多个 target 相互切换
+# 用于指示 LLDB 启动一个 REPL（Read-qEval-Print Loop）环境。与普通模式相比，允许您直接在调试器中执行代码片段
+repl.case:
+	make init.global.case LFLAGS=-r
+
+# 演示多个 target 相互切换，然后执行完成并退出
 $(BUILD)/target.source: $(BUILD)/empty.bin $(BUILD)/basic_flow.bin
 	echo "$(addprefix target create ,$(addsuffix \n,$^))" > $@
 	echo "target list" >> $@
@@ -91,4 +93,4 @@ target.case: $(BUILD)/target.source
 # 将 man 手册生成 adoc 文档
 adoc.case: script/adoc.py
 	lldb -b -O "command script import $<"
-	cd ../../docs/antora && antora generate playbook.yml
+	command -v antora && cd ../../docs/antora && antora generate playbook.yml || true
