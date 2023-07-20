@@ -4,4 +4,4 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 project(learn-lldb)
-add_subdirectory(src/main)
+add_subdirectory(src)

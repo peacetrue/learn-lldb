@@ -1,4 +1,7 @@
 include common.mk
+include lldb.mk
+include bin_log.mk
+include aslr.mk
 
 %: $(BUILD)/%;
 
@@ -6,12 +9,22 @@ include common.mk
 CFLAGS:=-g #生成调试信息
 
 # gcc 编译
+$(BUILD)/%.bin: $(BUILD)/%.s $(BUILD)
+	gcc $(CFLAGS) -o $@ $<
 $(BUILD)/%.bin: c/%.c $(BUILD)
 	gcc $(CFLAGS) -o $@ $<
 $(BUILD)/%.bin: cpp/%.cpp $(BUILD)
 	gcc $(CFLAGS) -o $@ $<
-$(BUILD)/%.bin: $(BUILD)/%.s $(BUILD)
-	gcc $(CFLAGS) -o $@ $<
+
+
+
+# lldb 调试 C 语言
+empty.case: lldb/empty;
+# lldb 调试汇编语言
+empty.asm.case: lldb/empty.asm;
+$(BUILD)/%.asm.s: c/%.c
+	cc -S -o $@ $<
+
 
 # 在 lldb 命令行打印信息
 lldb_echo=shell echo 'lldb: $(1)'
@@ -23,8 +36,8 @@ init/%:
 	echo "$(call lldb_echo,~/.lldbinit-$*)" > ~/.lldbinit-$*
 #命令行特定
 init-cmd: init/lldb init-global;
-init-local: init-cmd
-	echo "settings set target.load-cwd-lldbinit true" >> ~/.lldbinit-lldb
+init-local: init-global
+	echo "settings set target.load-cwd-lldbinit true" >> ~/.lldbinit
 	echo "$(call lldb_echo,./.lldbinit)" > ./.lldbinit
 clean/init:
 	rm -rf ~/.lldbinit
@@ -34,16 +47,6 @@ clean/init:
 $(BUILD)/%.source: $(BUILD)
 	echo "$(call lldb_echo,$*)" > $@
 
-# 执行 lldb
-lldb:
-	lldb $(LFLAGS)
-lldb/%: $(BUILD)/%.bin
-	lldb $(LFLAGS) -- $<
-
-# 调试汇编代码
-$(BUILD)/%.asm.s: c/%.c
-	cc -S -o $@ $<
-asm.case: lldb/empty.asm;
 
 # 初始化相关案例
 ## 清除配置文件
@@ -61,6 +64,15 @@ init-expr: clean/init init-global
 	echo "expr int \$$a=1;" >> ~/.lldbinit
 init.expr.case:
 	make init-expr lldb LFLAGS="-b -O \"p \\$$\$$a\""
+
+# 观察点案例，进程运行起来后，才能设置观察点
+watchpoint.case: $(BUILD)/watchpoint.source
+	echo "b main" > $<
+	echo "run" >> $<
+	echo "watchpoint set variable a" >> $<
+#	echo "watchpoint set expression -w write -s 1 -- a + 32" >> $<
+	echo "n" >> $<
+	make lldb/watchpoint LFLAGS="-b -s $<"
 
 # 初始化时导入脚本，然后在脚本中创建变量，后续打印变量
 init-script: clean/init init-local
@@ -94,3 +106,4 @@ target.case: $(BUILD)/target.source
 adoc.case: script/adoc.py
 	lldb -b -O "command script import $<"
 	command -v antora && cd ../../docs/antora && antora generate playbook.yml || true
+
