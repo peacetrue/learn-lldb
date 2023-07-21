@@ -3,5 +3,6 @@
 // * xref:manual.adoc[]
 // * xref:reference.adoc[]
 include::partial$nav-man.adoc[]
+include::partial$nav-key.adoc[]
 * xref:faq.adoc[]
 * xref:version.adoc[]

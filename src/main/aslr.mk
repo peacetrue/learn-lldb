@@ -1,3 +1,4 @@
+# ASLR 的全称是 "Address Space Layout Randomization"，即地址空间布局随机化
 #Linux 上设置开启/禁用地址随机化
 aslr/%:
 	@sysctl -a | grep kernel.randomize_va_space

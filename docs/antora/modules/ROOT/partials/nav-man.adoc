@@ -1,4 +1,4 @@
-* https://lldb.llvm.org/man/lldb.html[man 手册^]
+* https://lldb.llvm.org/man/lldb.html[帮助手册^]
 ** xref:man/apropos.adoc[apropos]
 ** xref:man/attach.adoc[attach]
 ** xref:man/b.adoc[b]

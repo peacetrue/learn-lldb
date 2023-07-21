@@ -1,22 +1,11 @@
-include common.mk
+include build.common.mk
+include build.elf.mk
 include lldb.mk
-include bin_log.mk
 include aslr.mk
+include bin_log.mk
+include dmbsd.mk
 
 %: $(BUILD)/%;
-
-#.SILENT:#静默模式，不会输出执行的命令
-CFLAGS:=-g #生成调试信息
-
-# gcc 编译
-$(BUILD)/%.bin: $(BUILD)/%.s $(BUILD)
-	gcc $(CFLAGS) -o $@ $<
-$(BUILD)/%.bin: c/%.c $(BUILD)
-	gcc $(CFLAGS) -o $@ $<
-$(BUILD)/%.bin: cpp/%.cpp $(BUILD)
-	gcc $(CFLAGS) -o $@ $<
-
-
 
 # lldb 调试 C 语言
 empty.case: lldb/empty;
@@ -24,7 +13,6 @@ empty.case: lldb/empty;
 empty.asm.case: lldb/empty.asm;
 $(BUILD)/%.asm.s: c/%.c
 	cc -S -o $@ $<
-
 
 # 在 lldb 命令行打印信息
 lldb_echo=shell echo 'lldb: $(1)'
