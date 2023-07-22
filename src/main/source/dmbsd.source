@@ -1,0 +1,12 @@
+b main
+r
+set set stop-line-count-before 0
+set set stop-line-count-after 5
+s
+fini
+set set stop-disassembly-display always
+set set stop-disassembly-count 5
+si
+#通过地址设置断点，如果不是对齐的指令，会跳转到指令开始：0x100003f56 ->  0x100003f54 <+4>:  leaq   0x3b(%rip), %rdi          ; "disassembly debug\n"
+b 0x100003f56
+c

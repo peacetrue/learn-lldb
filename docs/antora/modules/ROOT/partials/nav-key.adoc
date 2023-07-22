@@ -1,2 +1,3 @@
 * 帮助选项
+** xref:key/log-list.adoc[log-list]
 ** xref:key/settings-list.adoc[settings-list]

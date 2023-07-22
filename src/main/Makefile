@@ -4,6 +4,7 @@ include lldb.mk
 include aslr.mk
 include bin_log.mk
 include dmbsd.mk
+include requires.process.mk
 
 %: $(BUILD)/%;
 

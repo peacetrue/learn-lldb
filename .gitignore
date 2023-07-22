@@ -24,3 +24,4 @@ node_modules
 # local
 local*
 adoc.log
+src/main/script/lldb

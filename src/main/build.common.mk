@@ -6,14 +6,16 @@ override build:=build#目标文件目录，作为常量使用，请勿改变该�
 BUILD:=$(build)#作为变量使用
 
 mkdir/%:; mkdir -p $*
+mkdir: mkdir/$(BUILD);
 #所有不带食谱的规则，需要以分号结尾。去掉 $(BUILD)/% 后的分号，执行 make common.case，出现以下错误
 # make: *** No rule to make target `build/test', needed by `common.case'.  Stop.
-$(BUILD): mkdir/$(BUILD);
+$(BUILD): mkdir;
 $(BUILD)/%: mkdir/$(BUILD)/%;
 
 #如果是删除 build 目录，使用 -f 强制删除
 rm/%:; rm -r$(if $(filter $(build)%,$*),f,) $*
-clean: rm/$(BUILD);
+rm: rm/$(BUILD);
+clean: rm;
 clean/%: rm/$(BUILD)/%;
 
 #测试上述规则
