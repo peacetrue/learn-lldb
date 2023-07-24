@@ -1,5 +1,5 @@
 /**
- * 参考 dmbsd.mk。
+ * 参考 disassembly.mk。
  */
 #include <printf.h>
 

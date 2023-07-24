@@ -1,13 +1,5 @@
-# 构建相关：编译、链接
-#.SILENT:#静默模式，不会输出执行的命令
-CFLAGS:=-g #生成调试信息
-
-# gcc 编译
-$(BUILD)/%.bin: $(BUILD)
-$(BUILD)/%.bin: $(BUILD)/%.s $(BUILD)
-	gcc $(CFLAGS) -o $@ $<
+# 构建 ELF 文件：预处理、汇编、编译、链接
+CFLAGS+=-g #生成调试信息
+# 从 C 源码编译
 $(BUILD)/%.bin: c/%.c $(BUILD)
-	gcc $(CFLAGS) -o $@ $<
-$(BUILD)/%.bin: cpp/%.cpp $(BUILD)
-	gcc $(CFLAGS) -o $@ $<
-
+	$(CC) $(CFLAGS) -o $@ $<

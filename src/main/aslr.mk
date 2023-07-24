@@ -6,11 +6,11 @@ aslr/%:
 #	cp /etc/sysctl.conf /etc/sysctl.conf.bak
 #	echo 'kernel.randomize_va_space = 0' >> /etc/sysctl.conf
 #	sysctl -p
-aslr.enable: aslr/2
-aslr.disable: aslr/0
+aslr.enable: aslr/2;
+aslr.disable: aslr/0;
 
 aslr.times:=2
-# 不使用 lldb 直接运行
+# 不使用 lldb 直接运行，然后观察地址是否变化
 aslr.run.case: $(BUILD)/aslr.bin; $(shell yes "$<;" | head -n $(aslr.times))
 # 使用 lldb 运行 # settings set target.disable-aslr false
 aslr.lldb.name:=default enable disable

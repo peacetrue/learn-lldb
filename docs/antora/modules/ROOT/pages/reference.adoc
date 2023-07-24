@@ -1,2 +1,17 @@
 = 参考指南
 
+== 源码结构
+
+* docs：文档目录
+* src：源码目录（Maven 风格）
+** main：主目录
+*** c：C 源码目录
+*** script：LLDB 脚本目录
+*** source：LLDB source 目录
+*** Makefile：Make 配置文件
+*** {asterisk}.mk：Makefile 中导入的其他配置文件
+** test：测试目录
+*** script：LLDB 脚本测试目录
+* CMakeLists.txt：CMake 配置文件
+
+CMake 配置是可选的，可能需要直接在项目中运行 C 程序。

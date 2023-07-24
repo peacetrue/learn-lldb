@@ -10,7 +10,7 @@ long resolveArg(int argc, char **argv, long index, int defaults) {
 
 void *thread_func(void *arg) {
     pthread_setname_np("thread-2");
-    sleep((long ) arg);
+    sleep((long) arg);
     return arg;
 }
 
@@ -25,8 +25,9 @@ void *thread_func(void *arg) {
  */
 int main(int argc, char *argv[]) {
     long seconds = resolveArg(argc, argv, 1, 10);
-    printf("$ lldb\n");
+    printf("$ lldb -- %s\n", argv[0]);
     printf("(lldb) target create %s\n", argv[0]);
+    printf("(lldb) target list\n");
     printf("(lldb) b main\n");
     printf("(lldb) r\n");
 
@@ -41,9 +42,9 @@ int main(int argc, char *argv[]) {
     printf("(lldb) bt\n");
     printf("(lldb) frame select 1\n");
 
-    printf("(lldb) var argv[0]\n");
     printf("(lldb) re read rsp\n");
     printf("(lldb) x/16g $rsp\n");
+    printf("(lldb) p argv[0]\n");
     printf("(lldb) p (int)strlen(argv[0])\n");
 }
 
