@@ -3,9 +3,10 @@
 include build.common.mk
 include build.elf.mk
 include lldb.mk
+include disassembly.mk
+include lldbinit.mk
 include lifecycle.mk
 include aslr.mk
 include bin.log.mk
-include disassembly.mk
 include requires.process.mk
 include adoc.mk
