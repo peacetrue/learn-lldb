@@ -25,7 +25,7 @@ void *thread_func(void *arg) {
  */
 int main(int argc, char *argv[]) {
     long seconds = resolveArg(argc, argv, 1, 10);
-    printf("$ lldb -- %s\n", argv[0]);
+    printf("$ lldb %s\n", argv[0]);
     printf("(lldb) target create %s\n", argv[0]);
     printf("(lldb) target list\n");
     printf("(lldb) b main\n");

@@ -6,8 +6,8 @@ lldb:
 	lldb $(LFLAGS) $(ARGS)
 # 执行 LLDB 时，跟随应用和参数
 lldb/%: $(BUILD)/%.bin
-	lldb $(LFLAGS) -- $< $(ARGS)
+	lldb $(LFLAGS) $< $(ARGS)
 
 # 使用 LLDB 执行 empty 应用
 lldb.empty.case: lldb/empty;
-lldb.basic_flow.case: lldb/basic_flow;
+lldb.basic_flow.case: clean/basic_flow.bin lldb/basic_flow;
