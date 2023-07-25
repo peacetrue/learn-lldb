@@ -4,3 +4,13 @@
 
 不能使用管道符::
 例如： run | grep
+
+== 已解决
+
+=== ModuleNotFoundError: No module named 'lldb.embedded_interpreter'
+
+see https://github.com/llvm/llvm-project/issues/55575 .
+
+    apt install python3-lldb-14
+    ln -s /usr/lib/llvm-14/lib/python3.10/dist-packages/lldb/* /usr/lib/python3/dist-packages/lldb/
+

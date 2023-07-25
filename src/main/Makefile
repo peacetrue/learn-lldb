@@ -5,8 +5,9 @@ include build.elf.mk
 include lldb.mk
 include disassembly.mk
 include lldbinit.mk
-include lifecycle.mk
-include aslr.mk
+include lldbinit.options.mk
+include script.mk
 include bin.log.mk
+include aslr.mk
 include requires.process.mk
 include adoc.mk

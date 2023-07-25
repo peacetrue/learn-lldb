@@ -17,8 +17,10 @@ def __lldb_init_module(debugger: lldb.SBDebugger = lldb.debugger,
     :param debugger: LLDB 调试器对象，用于执行调试操作并访问调试器的各种功能和属性。
     :param internal_dict: LLDB 内部字典参数，用于存储调试器内部的状态或其他相关信息。
     """
-    print("debugger:", type(debugger), debugger)
-    print("internal_dict:", type(internal_dict), internal_dict)
+    # print("debugger:", type(debugger), debugger)
+    # print("internal_dict:", type(internal_dict))
+    debugger.HandleCommand(f"command script add -o -f {__name__}.command_formatter _help")
+    debugger.HandleCommand("_help help")
 
 
 def command_formatter(debugger: lldb.SBDebugger = lldb.debugger,
@@ -35,7 +37,8 @@ def command_formatter(debugger: lldb.SBDebugger = lldb.debugger,
     print("debugger:", type(debugger), debugger)
     print("command:", type(command), command)
     print("result:", type(result), result)
-    print("internal_dict:", type(internal_dict), internal_dict)
+    # print("internal_dict:", type(internal_dict), internal_dict)  # internal_dict 内容太多
+    print("internal_dict:", type(internal_dict))
 
 # 拷贝以下代码，创建命令
 # def command_usage(debugger: lldb.SBDebugger, command: str, result: lldb.SBCommandReturnObject, internal_dict: dict):

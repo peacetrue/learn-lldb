@@ -24,7 +24,7 @@ init.none.case: clean/init lldb;
 init.global.case: init-global lldb;
 # 命令行优先级高于全局默认，会顶替掉全局默认
 init.cmd.case: clean/init init-cmd lldb;
-init.local.case: init-local lldb;
+init.local.case: clean/init init-local lldb;
 
 ## 初始化时创建变量，后续打印变量。make 传递参数十分诡异
 #init-expr: clean/init init-global

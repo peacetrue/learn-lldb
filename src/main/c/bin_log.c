@@ -1,7 +1,7 @@
 /**
  * 此程序用于演示可执行文件的日志。
  */
-#include <printf.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 long resolveArg(int argc, char **argv, long index, int defaults) {
@@ -24,6 +24,6 @@ int main(int argc, char *argv[]) {
 
     long logCount = resolveArg(argc, argv, 1, 2);
     for (int i = 0; i < logCount; ++i) {
-        printf("log: %i\n", i);
+        printf("log-%i\n", i);
     }
 }

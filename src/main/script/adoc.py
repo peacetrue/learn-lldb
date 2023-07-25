@@ -29,8 +29,8 @@ logging.basicConfig(
 
 def __lldb_init_module(debugger, internal_dict):
     # lldb 初始执行
-    # save_command_help(debugger.GetCommandInterpreter())
-    # generate_nav_man()
+    save_command_help(debugger.GetCommandInterpreter())
+    generate_nav_man()
     save_command_key(debugger.GetCommandInterpreter(), ["settings list", "log list"])
     generate_nav_key()
 
